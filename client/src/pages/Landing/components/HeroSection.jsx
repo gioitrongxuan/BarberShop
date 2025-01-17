@@ -102,14 +102,14 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <span className="inline-block px-4 py-2 rounded-full bg-[#e9f6e9] text-purple-500 text-sm font-medium">
-                新しい遊び場を見つけよう
+                Tạo kiểu dáng mới cho mái tóc của bạn
               </span>
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              ルミルーと
+              Cùng chúng tôi&nbsp;
               <span className="text-purple-500 relative">
-                遊びに行こう
+                 tạo phong cách mới
                 <motion.svg
                   className="absolute -bottom-2 left-0 w-full"
                   height="8"
@@ -130,7 +130,9 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              ルミルーは、あなたとご家族のための「プレイグラウンド」を見つけてお手伝いをするプラットフォームです。自然、仲間と一緒に素晴らしい思い出を作りましょう。
+            Nằm giữa làng Chấn Long, quán cắt tóc lâu đời này là điểm đến quen thuộc của những ai yêu thích sự yên tĩnh và thoải mái. Với không gian thoáng đãng, cách bài trí đơn giản mà tinh tế, quán mang đến cảm giác thư giãn như ở nhà.
+
+Với lịch sử lâu năm, nơi đây không chỉ nổi tiếng với tay nghề cắt tóc khéo léo mà còn ghi điểm bởi mức giá cực kỳ phải chăng. Dù bạn đến để tân trang phong cách hay chỉ cần một chút gọn gàng, quán cắt tóc Chấn Long chắc chắn sẽ mang đến sự hài lòng cả về chất lượng lẫn dịch vụ.
             </p>
 
             <motion.div
@@ -141,7 +143,7 @@ const HeroSection = () => {
                 to="/auth/sign-in"
                 className="group inline-flex items-center gap-2 bg-purple-500 text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg shadow-purple-500/25 hover:bg-[#15803d] transition-all duration-300"
               >
-                始める
+                Khám phá
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>

@@ -102,6 +102,22 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+
+      {/* Google Maps Iframe */}
+      <section className="bg-white py-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-xl font-semibold mb-6">Địa chỉ của chúng tôi</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300140.52514206874!2d105.5190049010129!3d19.89249864078621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136f74da02f754b%3A0xeff78c866c6178c6!2zQuG6o3kgVGhhbmggQ-G6r3QgVMOzYw!5e1!3m2!1sja!2s!4v1737100611041!5m2!1sja!2s"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
     </div>
   );
 };

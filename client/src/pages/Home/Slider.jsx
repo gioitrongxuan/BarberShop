@@ -21,7 +21,7 @@ const playgrounds = playgroundsData ? playgroundsData.map((playground) => {
         name: playground.name.length > 29 ? playground.name.substring(0, 29) + '...' : playground.name,
         address: playground.address.length > 30 ? playground.address.substring(0, 30) + '...' : playground.address,
         admissionFee: playground.admissionFee,
-        imageUrl: is_faker==1 ? faker.image.url() : playground.imageUrl,
+        imageUrl: is_faker==1 ? faker.image.avatar : playground.imageUrl,
     };
 }) : [];
 return (

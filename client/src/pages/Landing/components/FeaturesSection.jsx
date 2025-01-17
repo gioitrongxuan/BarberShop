@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Shield, Users } from 'lucide-react';
+import { Scissors, Shield, Users } from 'lucide-react';
 
 const FeatureCard = ({ title, description, icon: Icon, index, color }) => {
   return (
@@ -52,24 +52,25 @@ const FeatureCard = ({ title, description, icon: Icon, index, color }) => {
 const FeaturesSection = () => {
   const features = [
     {
-      title: "簡単検索",
-      description: "お子様の年齢や興味に合わせて、最適な遊び場を見つけることができます。",
-      icon: Search,
+      title: "Tìm kiểu tóc dễ dàng",
+      description: "Khách hàng có thể tham khảo các kiểu tóc phù hợp với khuôn mặt và phong cách của mình.",
+      icon: Scissors, // Biểu tượng cây kéo, biểu thị dịch vụ cắt tóc
+      color: "#16a34a" // Màu xanh lá, mang lại cảm giác tươi mới và thân thiện
+    },
+    {
+      title: "Không gian an toàn và sạch sẽ",
+      description: "Chúng tôi đảm bảo môi trường sạch sẽ và vệ sinh, mang lại sự an tâm cho khách hàng.",
+      icon: Shield, // Biểu tượng cái khiên, biểu thị sự bảo vệ
       color: "#16a34a"
     },
     {
-      title: "安全な環境",
-      description: "すべての遊び場は厳密な安全基準を満たしています。",
-      icon: Shield,
-      color: "#16a34a" // Darker purple for variety
-    },
-    {
-      title: "コミュニティ",
-      description: "他の家族との交流や情報共有が可能です。",
-      icon: Users,
-      color: "#16a34a" // Lighter purple for variety  
+      title: "Cộng đồng khách hàng thân thiết",
+      description: "Khách hàng có thể tham gia các chương trình ưu đãi và giao lưu với cộng đồng yêu thích làm đẹp.",
+      icon: Users, // Biểu tượng nhóm người, đại diện cho cộng đồng
+      color: "#16a34a"
     }
   ];
+  
 
   return (
     <section className="py-24 relative overflow-hidden bg-white">
@@ -83,10 +84,10 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Bảy thanh cắt tóc<span className="text-purple-500">主な機能</span>
+            Bảy thanh cắt tóc<span className="text-purple-500">: Dịch vụ chính</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            子育て家族のための安全で楽しい遊び場探しをサポートする機能をご用意しています。
+            Cung cấp các dịch vụ làm đẹp tóc chất lượng cao, đa dạng và phong phú.
           </p>
         </motion.div>
 

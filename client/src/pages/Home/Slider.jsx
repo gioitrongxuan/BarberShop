@@ -41,7 +41,7 @@ return (
             {/* Loop through the playground data and render slides */}
             {playgrounds.map((playground) => (
                 <SwiperSlide key={playground.id}>
-                    {/* <div className="bg-green-50 w-full h-full flex items-center justify-center "> */}
+                    {/* <div className="bg-purple-50 w-full h-full flex items-center justify-center "> */}
                         {/* <div className="bg-white w-11/12 h-11/12"> */}
                         
                         <PlaygroundInfoCard data={playground} />

@@ -10,18 +10,18 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-green-600">
+    <footer className="bg-purple-600">
       <div className="max-w-[1400px] mx-auto px-6 py-4">
         <div className="flex flex-wrap items-start justify-between gap-8">
           {/* Brand Section */}
-          <div className="bg-green-700/30 backdrop-blur-sm rounded-lg p-3">
+          <div className="bg-purple-700/30 backdrop-blur-sm rounded-lg p-3">
             <motion.h3 
               className="text-xl font-bold text-white mb-1"
               whileHover={{ scale: 1.02 }}
             >
-              Lumiroo
+              Bảy thanh cắt tóc
             </motion.h3>
-            <p className="text-green-50 text-sm mb-3">
+            <p className="text-purple-50 text-sm mb-3">
               楽しい遊び場を探しましょう！
             </p>
             <div className="flex gap-2">
@@ -33,7 +33,7 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href={social.href}
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-green-600 hover:bg-green-50 transition-colors"
+                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-purple-600 hover:bg-purple-50 transition-colors"
                   whileHover={{ y: -2 }}
                 >
                   <social.icon className="w-4 h-4" />
@@ -53,14 +53,14 @@ const Footer = () => {
               <nav className="space-y-2">
                 <motion.a
                   href="#"
-                  className="block text-sm text-green-100 hover:text-white"
+                  className="block text-sm text-purple-100 hover:text-white"
                   whileHover={{ x: 3 }}
                 >
                   利用規約
                 </motion.a>
                 <motion.a
                   href="#"
-                  className="block text-sm text-green-100 hover:text-white"
+                  className="block text-sm text-purple-100 hover:text-white"
                   whileHover={{ x: 3 }}
                 >
                   プライバシーポリシー
@@ -77,14 +77,14 @@ const Footer = () => {
               <nav className="space-y-2">
                 <motion.a
                   href="#"
-                  className="block text-sm text-green-100 hover:text-white"
+                  className="block text-sm text-purple-100 hover:text-white"
                   whileHover={{ x: 3 }}
                 >
                   お問い合わせ
                 </motion.a>
                 <motion.a
                   href="#"
-                  className="block text-sm text-green-100 hover:text-white"
+                  className="block text-sm text-purple-100 hover:text-white"
                   whileHover={{ x: 3 }}
                 >
                   よくある質問
@@ -99,14 +99,14 @@ const Footer = () => {
                 <h4 className="font-semibold">その他</h4>
               </div>
               <motion.div
-                className="bg-green-700/30 backdrop-blur-sm rounded-lg p-3"
+                className="bg-purple-700/30 backdrop-blur-sm rounded-lg p-3"
                 whileHover={{ scale: 1.02 }}
               >
                 <p className="text-sm text-white mb-2">
                   新機能をお試しください!
                 </p>
                 <motion.button
-                  className="text-xs bg-white text-green-600 px-4 py-1.5 rounded-md hover:bg-green-50 transition-colors"
+                  className="text-xs bg-white text-purple-600 px-4 py-1.5 rounded-md hover:bg-purple-50 transition-colors"
                   whileHover={{ scale: 1.05 }}
                 >
                   詳細を見る
@@ -117,9 +117,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-4 pt-3 border-t border-green-500/30">
-          <p className="text-xs text-center text-green-100">
-            &copy; {new Date().getFullYear()} Lumiroo. All Rights Reserved.
+        <div className="mt-4 pt-3 border-t border-purple-500/30">
+          <p className="text-xs text-center text-purple-100">
+            &copy; {new Date().getFullYear()} BayThanhCatToc. All Rights Reserved.
           </p>
         </div>
       </div>

@@ -24,7 +24,7 @@ const TimeDropdown = ({ options, selectedTime, onTimeSelect, isEndTime }) => {
           value={inputTime}
           onChange={handleTimeInput}
           className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-md 
-                   focus:outline-none focus:ring-2 focus:ring-green-500"
+                   focus:outline-none focus:ring-2 focus:ring-purple-500"
           step="300" // 5 minutes interval
         />
       </div>
@@ -38,8 +38,8 @@ const TimeDropdown = ({ options, selectedTime, onTimeSelect, isEndTime }) => {
               px-2 py-1.5 text-sm rounded-md border
               transition-colors duration-200
               ${item.value === selectedTime?.value
-                ? 'bg-green-600 text-white border-green-600'
-                : 'bg-white text-gray-700 border-gray-200 hover:bg-green-50'
+                ? 'bg-purple-600 text-white border-purple-600'
+                : 'bg-white text-gray-700 border-gray-200 hover:bg-purple-50'
               }
             `}
             onClick={() => {

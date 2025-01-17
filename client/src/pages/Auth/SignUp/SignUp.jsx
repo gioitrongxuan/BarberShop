@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import amusementParkAnimation from "../../../assets/ride-animation.json";
-import amusementParkSVG from "../../../assets/amusement-park-animate.svg";
+// import amusementParkAnimation from "../../../assets/ride-animation.json";
+import amusementParkAnimation from "../../../assets/anhcattoc.png";
+
+import amusementParkSVG from "../../../assets/background_login.webp";
 import TransitionWrapper from "../../../components/TransitionWrapper";
 import { uploadImage } from "../../../apis/upload";
 import { GENDER } from "../../../constants";
@@ -62,7 +64,7 @@ const SignUp = () => {
 
     if (formData.password !== formData.confirmPassword) {
       setNotificationTitle('エラー');
-      setNotificationMessage('パスワードが一致しません。');
+      setNotificationMessage('Mật khẩuが一致しません。');
       setShowNotification(true);
       return;
     }
@@ -83,7 +85,7 @@ const SignUp = () => {
     } catch (error) {
       console.log(error);
       setNotificationTitle('エラー');
-      setNotificationMessage('サインアップに失敗しました。もう一度お試しください。');
+      setNotificationMessage('Đăng kíに失敗しました。もう一度お試しください。');
       setShowNotification(true);
     }
   };
@@ -92,7 +94,7 @@ const SignUp = () => {
     <TransitionWrapper direction={-1}>
       <div className="min-h-screen flex overflow-hidden">
         <motion.div
-          className="w-1/2 relative p-10 shadow-2xl flex flex-col justify-center items-center bg-gradient-to-b from-white to-green-50"
+          className="w-1/2 relative p-10 shadow-2xl flex flex-col justify-center items-center bg-gradient-to-b from-white to-purple-50"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}

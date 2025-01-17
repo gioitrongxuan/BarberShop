@@ -2,7 +2,7 @@ const SocialLogin = () => {
     return (
       <>
         <p className="text-sm text-gray-700 mt-4">
-          またはソーシャルアカウントでログイン
+          Đăng nhập bằng phương thức khác 
         </p>
         <div className="flex justify-center items-center mt-2 space-x-4 z-10">
           <a href="#" className="text-gray-700 hover:text-gray-900">

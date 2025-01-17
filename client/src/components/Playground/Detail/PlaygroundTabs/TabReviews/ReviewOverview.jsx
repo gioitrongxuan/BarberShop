@@ -64,11 +64,11 @@ const ReviewOverview = ({reviews,init_rating}) => {
  
   }, [reviews]);
   return (
-    <div className="p-6 bg-green-50/50 rounded-xl hover:shadow-md transition-shadow">
+    <div className="p-6 bg-purple-50/50 rounded-xl hover:shadow-md transition-shadow">
       <div className="grid grid-cols-12 gap-6">
         {/* Overall Rating */}
-        <div className="col-span-4 flex flex-col items-center justify-center border-r border-green-100 py-4">
-          <div className="text-4xl font-bold text-green-600 mb-2">{averageRating}</div>
+        <div className="col-span-4 flex flex-col items-center justify-center border-r border-purple-100 py-4">
+          <div className="text-4xl font-bold text-purple-600 mb-2">{averageRating}</div>
           <div className="flex items-center justify-center gap-1">
           <div className="flex items-center gap-3 mb-6">
             <div className="flex items-center">
@@ -101,7 +101,7 @@ const ReviewOverview = ({reviews,init_rating}) => {
                 </div>
                 <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-green-600 rounded-full transition-all duration-500 ease-out"
+                    className="h-full bg-purple-600 rounded-full transition-all duration-500 ease-out"
                     style={{ width: `${percentage}%` }}
                   />
                 </div>

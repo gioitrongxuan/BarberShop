@@ -13,7 +13,7 @@ function PlaygroundForm({
   setCheckedAttractions,
 }) {
   return (
-    <div className="bg-white rounded-xl shadow-lg border-2 border-green-500/20 overflow-hidden">
+    <div className="bg-white rounded-xl shadow-lg border-2 border-purple-500/20 overflow-hidden">
       <div className="p-6">
         <div className="grid grid-cols-12 gap-6">
           {/* Left Column */}
@@ -21,8 +21,8 @@ function PlaygroundForm({
             {/* Playground Name */}
             <div>
               <div className="flex items-center space-x-2 mb-2">
-                <MapPin className="w-5 h-5 text-green-600" />
-                <label className="text-sm font-bold text-green-600">名前</label>
+                <MapPin className="w-5 h-5 text-purple-600" />
+                <label className="text-sm font-bold text-purple-600">名前</label>
               </div>
               <input
                 type="text"
@@ -31,8 +31,8 @@ function PlaygroundForm({
                   setFormData({ ...formData, name: e.target.value })
                 }
                 className="w-full px-4 py-3 bg-white border-2 border-gray-200 
-         rounded-xl outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500
-         hover:border-green-400 transition-all duration-200 text-sm"
+         rounded-xl outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500
+         hover:border-purple-400 transition-all duration-200 text-sm"
                 placeholder="遊び場の名前を入力"
               />
             </div>
@@ -51,8 +51,8 @@ function PlaygroundForm({
             {/* Business Hours */}
             <div>
               <div className="flex items-center space-x-2 mb-2">
-                <Clock className="w-5 h-5 text-green-600" />
-                <label className="text-sm font-bold text-green-600">
+                <Clock className="w-5 h-5 text-purple-600" />
+                <label className="text-sm font-bold text-purple-600">
                   営業時間
                 </label>
               </div>
@@ -64,8 +64,8 @@ function PlaygroundForm({
                     setFormData({ ...formData, openingTime: e.target.value })
                   }
                   className="flex-1 px-4 py-3 bg-white border-2 border-gray-200 
-                         rounded-xl focus:ring-0 focus:border-green-500 outline-none
-                         hover:border-green-400 transition-all duration-200 text-sm"
+                         rounded-xl focus:ring-0 focus:border-purple-500 outline-none
+                         hover:border-purple-400 transition-all duration-200 text-sm"
                 />
                 <span className="text-gray-400">→</span>
                 <input
@@ -75,8 +75,8 @@ function PlaygroundForm({
                     setFormData({ ...formData, closingTime: e.target.value })
                   }
                   className="flex-1 px-4 py-3 bg-white border-2 border-gray-200 
-                         rounded-xl focus:ring-0 focus:border-green-500 outline-none
-                         hover:border-green-400 transition-all duration-200 text-sm"
+                         rounded-xl focus:ring-0 focus:border-purple-500 outline-none
+                         hover:border-purple-400 transition-all duration-200 text-sm"
                 />
               </div>
             </div>
@@ -84,8 +84,8 @@ function PlaygroundForm({
             {/* Ticket Price */}
             <div>
               <div className="flex items-center space-x-2 mb-2">
-                <CreditCard className="w-5 h-5 text-green-600" />
-                <label className="text-sm font-bold text-green-600">
+                <CreditCard className="w-5 h-5 text-purple-600" />
+                <label className="text-sm font-bold text-purple-600">
                   チケット料金
                 </label>
               </div>
@@ -97,8 +97,8 @@ function PlaygroundForm({
                 }
                 placeholder=""
                 className="w-full px-4 py-3 bg-white border-2 border-gray-200 
-         rounded-xl outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500
-         hover:border-green-400 transition-all duration-200 text-sm"
+         rounded-xl outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500
+         hover:border-purple-400 transition-all duration-200 text-sm"
               />
             </div>
 
@@ -112,8 +112,8 @@ function PlaygroundForm({
             {/* Description */}
             <div>
               <div className="flex items-center space-x-2 mb-2">
-                <FileText className="w-5 h-5 text-green-600" />
-                <label className="text-sm font-bold text-green-600">
+                <FileText className="w-5 h-5 text-purple-600" />
+                <label className="text-sm font-bold text-purple-600">
                   詳細情報
                 </label>
               </div>
@@ -124,8 +124,8 @@ function PlaygroundForm({
                 }
                 rows={4}
                 className="w-full px-4 py-3 bg-white border-2 border-gray-200 
-         rounded-xl outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500
-         hover:border-green-400 transition-all duration-200 text-sm"
+         rounded-xl outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500
+         hover:border-purple-400 transition-all duration-200 text-sm"
                 placeholder="遊び場の詳細情報を入力"
               />
             </div>
@@ -136,7 +136,7 @@ function PlaygroundForm({
       {/* Action Buttons */}
       <div
         className="px-6 py-4 bg-gradient-to-br from-gray-50 to-gray-100/80 
-                   border-t-2 border-green-500/20 flex justify-end space-x-3"
+                   border-t-2 border-purple-500/20 flex justify-end space-x-3"
       >
         <motion.button
           whileHover={{ scale: 1.01 }}
@@ -153,8 +153,8 @@ function PlaygroundForm({
           whileTap={{ scale: 0.99 }}
           onClick={onSubmit}
           className="px-6 py-2.5 text-sm font-medium text-white 
-                   bg-gradient-to-r from-green-600 to-green-500
-                   hover:from-green-500 hover:to-green-400 
+                   bg-gradient-to-r from-purple-600 to-purple-500
+                   hover:from-purple-500 hover:to-purple-400 
                    rounded-xl shadow-sm hover:shadow transition-all duration-200"
         >
           完了

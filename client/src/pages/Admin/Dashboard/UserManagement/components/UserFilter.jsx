@@ -118,7 +118,7 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
    <motion.div
      initial={{ opacity: 0, y: -10 }}
      animate={{ opacity: 1, y: 0 }}
-     className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg overflow-hidden border-2 border-green-500/20"
+     className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg overflow-hidden border-2 border-purple-500/20"
    >
      <div className="p-6 space-y-6">
        {/* First Row */}
@@ -130,8 +130,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
            transition={{ type: "spring", stiffness: 300 }}
          >
            <div className="flex items-center space-x-2 mb-3">
-             <Search className="w-5 h-5 text-green-600" />
-             <label className="text-sm font-bold text-green-600">
+             <Search className="w-5 h-5 text-purple-600" />
+             <label className="text-sm font-bold text-purple-600">
                名前
              </label>
            </div>
@@ -142,8 +142,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
                value={formData.name}
                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                className="w-full pl-4 pr-4 py-3 bg-white border-2 border-gray-200 
-                        rounded-xl focus:ring-0 focus:border-green-500
-                        hover:border-green-400 transition-all duration-200 text-sm
+                        rounded-xl focus:ring-0 focus:border-purple-500
+                        hover:border-purple-400 transition-all duration-200 text-sm
                         shadow-sm hover:shadow-md outline-none"
              />
            </div>
@@ -156,8 +156,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
            transition={{ type: "spring", stiffness: 300 }}
          >
            <div className="flex items-center space-x-2 mb-3">
-             <MapPin className="w-5 h-5 text-green-600" />
-             <label className="text-sm font-bold text-green-600">
+             <MapPin className="w-5 h-5 text-purple-600" />
+             <label className="text-sm font-bold text-purple-600">
                地域
              </label>
            </div>
@@ -165,7 +165,7 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
              <button
                onClick={() => setShowAreaDropdown(!showAreaDropdown)}
                className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl
-                        text-left hover:border-green-400 focus:ring-0 focus:border-green-500
+                        text-left hover:border-purple-400 focus:ring-0 focus:border-purple-500
                         transition-all duration-200 text-sm shadow-sm hover:shadow-md outline-none"
              >
                <div className="flex items-center justify-between">
@@ -196,8 +196,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
                      style={{ pointerEvents: 'auto' }}
                      className={`z-50 w-full px-4 py-3 text-sm text-left transition-colors
                        ${area.id === selectedArea.id 
-                         ? 'bg-green-100 text-green-600 font-bold' 
-                         : 'text-gray-700 hover:text-green-600'}`}
+                         ? 'bg-purple-100 text-purple-600 font-bold' 
+                         : 'text-gray-700 hover:text-purple-600'}`}
                    >
                      {area.name}
                    </motion.button>
@@ -217,8 +217,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
            transition={{ type: "spring", stiffness: 300 }}
          >
            <div className="flex items-center space-x-2 mb-3">
-             <Phone className="w-5 h-5 text-green-600" />
-             <label className="text-sm font-bold text-green-600">
+             <Phone className="w-5 h-5 text-purple-600" />
+             <label className="text-sm font-bold text-purple-600">
                電話番号
              </label>
            </div>
@@ -229,8 +229,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
                value={formData.phone}
                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                className="w-full px-4 py-3 bg-white border-2 border-gray-200 
-                       rounded-xl focus:ring-0 focus:border-green-500
-                       hover:border-green-400 transition-all duration-200 text-sm
+                       rounded-xl focus:ring-0 focus:border-purple-500
+                       hover:border-purple-400 transition-all duration-200 text-sm
                        shadow-sm hover:shadow-md outline-none"
              />
            </div>
@@ -243,8 +243,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
            transition={{ type: "spring", stiffness: 300 }}
          >
            <div className="flex items-center space-x-2 mb-3">
-             <User className="w-5 h-5 text-green-600" />
-             <label className="text-sm font-bold text-green-600">
+             <User className="w-5 h-5 text-purple-600" />
+             <label className="text-sm font-bold text-purple-600">
                年齢
              </label>
            </div>
@@ -256,8 +256,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
                  value={formData.minAge}
                  onChange={(e) => setFormData({ ...formData, minAge: e.target.value })}
                  className="w-full px-4 py-3 bg-white border-2 border-gray-200 
-                         rounded-xl focus:ring-0 focus:border-green-500
-                         hover:border-green-400 transition-all duration-200 text-sm
+                         rounded-xl focus:ring-0 focus:border-purple-500
+                         hover:border-purple-400 transition-all duration-200 text-sm
                          shadow-sm hover:shadow-md outline-none"
                />
              </div>
@@ -269,8 +269,8 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
                  value={formData.maxAge}
                  onChange={(e) => setFormData({ ...formData, maxAge: e.target.value })}
                  className="w-full px-4 py-3 bg-white border-2 border-gray-200 
-                         rounded-xl focus:ring-0 focus:border-green-500
-                         hover:border-green-400 transition-all duration-200 text-sm
+                         rounded-xl focus:ring-0 focus:border-purple-500
+                         hover:border-purple-400 transition-all duration-200 text-sm
                          shadow-sm hover:shadow-md outline-none"
                />
              </div>
@@ -280,7 +280,7 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
      </div>
 
      {/* Search Button */}
-     <div className="px-6 py-4 bg-gradient-to-br from-gray-50 to-gray-100 border-t border-green-500/20">
+     <div className="px-6 py-4 bg-gradient-to-br from-gray-50 to-gray-100 border-t border-purple-500/20">
        <div className="flex justify-end gap-4">
          <motion.button
            whileHover={{ scale: 1.02, y: -1 }}
@@ -304,9 +304,9 @@ const UserFilter = ({setFilter,setIsFiltering,isFiltering}) => {
          <motion.button
            whileHover={{ scale: 1.02, y: -1 }}
            whileTap={{ scale: 0.98 }}
-           className="px-8 py-3 bg-gradient-to-r from-green-600 to-green-500 
+           className="px-8 py-3 bg-gradient-to-r from-purple-600 to-purple-500 
                     text-white font-bold rounded-xl text-sm
-                    shadow-lg hover:shadow-xl hover:from-green-500 hover:to-green-400
+                    shadow-lg hover:shadow-xl hover:from-purple-500 hover:to-purple-400
                     transition-all duration-200"
             onClick={onSearch}
          >

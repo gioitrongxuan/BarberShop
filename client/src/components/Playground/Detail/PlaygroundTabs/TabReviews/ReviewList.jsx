@@ -33,10 +33,10 @@ const ReviewList = ({reviews}) => {
         {currentReviews.map((review) => (
           <div
             key={review.id}
-            className="p-6 bg-green-50/30 rounded-xl border border-green-100/50 hover:shadow-md transition-all duration-300"
+            className="p-6 bg-purple-50/30 rounded-xl border border-purple-100/50 hover:shadow-md transition-all duration-300"
           >
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white font-medium text-lg">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white font-medium text-lg">
                 {/* set avatar từ link ảnh? */}
                 <img
                       src={review.avatar}
@@ -68,13 +68,13 @@ const ReviewList = ({reviews}) => {
                   {review.content}
                 </p>
 
-                <div className="flex items-center pt-3 border-t border-green-100">
+                <div className="flex items-center pt-3 border-t border-purple-100">
                   <button 
                     onClick={() => handleHelpfulClick(review.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all
                       ${helpfulReviews.has(review.id)
-                        ? "text-green-600 bg-green-50"
-                        : "text-gray-500 hover:text-green-600 hover:bg-green-50"
+                        ? "text-purple-600 bg-purple-50"
+                        : "text-gray-500 hover:text-purple-600 hover:bg-purple-50"
                       }`}
                   >
                     <ThumbsUp className={`w-4 h-4 ${

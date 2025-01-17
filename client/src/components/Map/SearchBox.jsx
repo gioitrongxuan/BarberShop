@@ -21,7 +21,7 @@ const SearchBox = ({
   const [isSearching, setIsSearching] = useState(false);
 
   const breadcrumbItems = [
-    { label: 'ホームページ', path: '/' },
+    { label: 'Trang chủ', path: '/' },
     { label: '遊び場検索', path: '/playground-recommendation' },
     { label: playgroundName || 'ディズニーランド', path: `/playground/${playgroundId}`
  },
@@ -97,12 +97,12 @@ const SearchBox = ({
                 {item.path ? (
                   <button
                     onClick={() => navigate(item.path)}
-                    className="text-gray-600 hover:text-green-600 transition-all duration-200 shrink-0 hover:scale-105"
+                    className="text-gray-600 hover:text-purple-600 transition-all duration-200 shrink-0 hover:scale-105"
                   >
                     {item.label}
                   </button>
                 ) : (
-                  <span className="text-green-600 shrink-0">{item.label}</span>
+                  <span className="text-purple-600 shrink-0">{item.label}</span>
                 )}
               </React.Fragment>
             ))}
@@ -111,7 +111,7 @@ const SearchBox = ({
 
         <div className="p-6 space-y-4">
           <div className="space-y-2 group/input relative">
-            <label className="text-sm font-bold text-green-600 transition-colors duration-200 group-hover/input:text-green-700">
+            <label className="text-sm font-bold text-purple-600 transition-colors duration-200 group-hover/input:text-purple-700">
               出発地
             </label>
             <div className="relative flex gap-3">
@@ -124,18 +124,18 @@ const SearchBox = ({
                     setOrigin(e.target.value);
                     debouncedSearch(e.target.value);
                   }}
-                  className="w-full px-4 py-2.5 pl-9 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200 hover:border-green-300"
+                  className="w-full px-4 py-2.5 pl-9 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200 hover:border-purple-300"
                 />
-                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-hover/input:text-green-500 transition-colors duration-200" />
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-hover/input:text-purple-500 transition-colors duration-200" />
               </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={onGetCurrentLocation}
-                className="px-3.5 py-2.5 bg-gray-100 rounded-lg hover:bg-green-50 transition-all duration-200 hover:shadow-md active:shadow-sm"
+                className="px-3.5 py-2.5 bg-gray-100 rounded-lg hover:bg-purple-50 transition-all duration-200 hover:shadow-md active:shadow-sm"
                 title="現在地を取得"
               >
-                <Navigation className="w-4 h-4 text-gray-600 group-hover/input:text-green-600 transition-colors duration-200" />
+                <Navigation className="w-4 h-4 text-gray-600 group-hover/input:text-purple-600 transition-colors duration-200" />
               </motion.button>
             </div>
 
@@ -145,7 +145,7 @@ const SearchBox = ({
                   <button
                     key={index}
                     onClick={() => handleLocationSelect(result)}
-                    className="w-full px-4 py-2 text-sm text-left hover:bg-green-50 transition-colors duration-200 flex items-center gap-2
+                    className="w-full px-4 py-2 text-sm text-left hover:bg-purple-50 transition-colors duration-200 flex items-center gap-2
                       first:rounded-t-lg last:rounded-b-lg border-b last:border-b-0 border-gray-100"
                   >
                     <MapPin className="w-4 h-4 text-gray-400" />
@@ -157,13 +157,13 @@ const SearchBox = ({
 
             {isSearching && (
               <div className="absolute w-full mt-1 bg-white rounded-lg shadow-lg border border-gray-100 p-4 flex justify-center">
-                <div className="w-5 h-5 border-2 border-green-500 border-t-transparent rounded-full animate-spin" />
+                <div className="w-5 h-5 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
               </div>
             )}
           </div>
 
           <div className="space-y-2 group/input">
-            <label className="text-sm font-bold text-green-600 transition-colors duration-200 group-hover/input:text-green-700">
+            <label className="text-sm font-bold text-purple-600 transition-colors duration-200 group-hover/input:text-purple-700">
               目的地
             </label>
             <div className="relative">
@@ -172,12 +172,12 @@ const SearchBox = ({
                 value={destination}
                 onChange={(e) => setDestination(e.target.value)}
                 className="w-full px-4 py-2.5 pl-9 text-sm border border-gray-200 rounded-lg bg-gray-50 transition-all duration-200 
-                  group-hover/input:border-green-300 
+                  group-hover/input:border-purple-300 
                   focus:outline-none
-                  focus:ring-2 focus:ring-green-500
-                  focus:border-green-500"
+                  focus:ring-2 focus:ring-purple-500
+                  focus:border-purple-500"
               />
-              <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-hover/input:text-green-500 transition-colors duration-200" />
+              <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-hover/input:text-purple-500 transition-colors duration-200" />
             </div>
           </div>
 
@@ -186,14 +186,14 @@ const SearchBox = ({
             whileTap={{ scale: 0.98 }}
             onClick={onSearch}
             disabled={isLoading}
-            className="w-full py-3 bg-green-600 text-white rounded-lg text-sm font-medium transition-all duration-300 
-              hover:bg-green-500 hover:shadow-lg hover:shadow-green-100
-              active:bg-green-700 active:shadow-sm
+            className="w-full py-3 bg-purple-600 text-white rounded-lg text-sm font-medium transition-all duration-300 
+              hover:bg-purple-500 hover:shadow-lg hover:shadow-purple-100
+              active:bg-purple-700 active:shadow-sm
               disabled:bg-gray-400 disabled:shadow-none
               relative overflow-hidden group/button"
           >
             <span className="relative z-10">見つける</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-500 transform scale-x-0 group-hover/button:scale-x-100 transition-transform duration-300 origin-left" />
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-500 transform scale-x-0 group-hover/button:scale-x-100 transition-transform duration-300 origin-left" />
           </motion.button>
         </div>
       </div>

@@ -11,7 +11,7 @@ const SignInForm = ({ onSubmit, initialEmail = "", initialPassword = "" }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !password) {
-      setError("メールアドレスとパスワードを入力してください。");
+      setError("Địa chỉ emailとMật khẩuを入力してください。");
       return;
     }
     setError("");
@@ -21,27 +21,27 @@ const SignInForm = ({ onSubmit, initialEmail = "", initialPassword = "" }) => {
   return (
     <form onSubmit={handleSubmit} className="w-3/4 z-10">
       <label className="block text-lg font-semibold text-gray-700 mb-2">
-        メールアドレス
+        Địa chỉ email
       </label>
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="例: abc12345@gmail.com"
-        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 mb-6 transition duration-300 shadow-sm"
+        placeholder="VD: abc12345@gmail.com"
+        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 mb-6 transition duration-300 shadow-sm"
         required
       />
 
       <label className="block text-lg font-semibold text-gray-700 mb-2">
-        パスワード
+        Mật khẩu
       </label>
       <div className="relative mb-2">
         <input
           type={showPassword ? "text" : "password"}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="パスワードを入力してください"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 shadow-sm"
+          placeholder="Mật khẩuを入力してください"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300 shadow-sm"
           required
         />
         <button
@@ -61,10 +61,10 @@ const SignInForm = ({ onSubmit, initialEmail = "", initialPassword = "" }) => {
       >
         <Link
           to="/auth/reset-password"
-          className="inline-block text-sm text-green-600 hover:text-green-700 transition-all duration-300 
-                   hover:translate-x-1 bg-green-50 px-3 py-1.5 rounded-lg hover:bg-green-100"
+          className="inline-block text-sm text-purple-600 hover:text-purple-700 transition-all duration-300 
+                   hover:translate-x-1 bg-purple-50 px-3 py-1.5 rounded-lg hover:bg-purple-100"
         >
-          パスワードをお忘れですか？
+          Tìm lại Mật khẩu
         </Link>
       </motion.div>
 
@@ -80,11 +80,12 @@ const SignInForm = ({ onSubmit, initialEmail = "", initialPassword = "" }) => {
 
       <motion.button
         type="submit"
-        className="flex items-center justify-center gap-2 w-full bg-green-500 text-white font-medium py-3 mt-6 rounded-lg hover:bg-green-600 shadow-lg transition duration-300 transform hover:-translate-y-1"
+        className="flex items-center justify-center gap-2 w-full bg-purple-500 text-white font-medium py-3 mt-6 rounded-lg hover:bg-purple-600 shadow-lg transition duration-300 transform hover:-translate-y-1"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <i className="fa-solid fa-right-to-bracket"></i> ログイン
+        <i className="fa-solid fa-right-to-bracket"></i> 
+        Đăng nhập
       </motion.button>
     </form>
   );

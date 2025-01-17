@@ -6,13 +6,13 @@ const PlaygroundHeader = ({ playgroundName = "ディズニーランド" }) => {
   const navigate = useNavigate();
 
   const breadcrumbItems = [
-    { label: "ホームページ", path: "/" },
+    { label: "Trang chủ", path: "/" },
     { label: "遊び場リスト", path: "/playground-recommendation" },
     { label: playgroundName, path: null }
   ];
 
   return (
-    <div className="bg-white border-b border-green-100">
+    <div className="bg-white border-b border-purple-100">
       <div className="max-w-7xl mx-auto px-6">
         <div className="py-4 flex items-center gap-2 text-sm">
           {breadcrumbItems.map((item, index) => (
@@ -23,12 +23,12 @@ const PlaygroundHeader = ({ playgroundName = "ディズニーランド" }) => {
               {item.path ? (
                 <button
                   onClick={() => navigate(item.path)}
-                  className="text-gray-600 hover:text-green-600 transition-colors font-medium"
+                  className="text-gray-600 hover:text-purple-600 transition-colors font-medium"
                 >
                   {item.label}
                 </button>
               ) : (
-                <span className="text-green-600 font-medium">{item.label}</span>
+                <span className="text-purple-600 font-medium">{item.label}</span>
               )}
             </React.Fragment>
           ))}

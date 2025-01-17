@@ -17,7 +17,7 @@ const LandingHeader = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Logo size="text-3xl" color="text-[#16a34a]" />
+            <Logo size="text-3xl" color="text-purple-500" />
           </motion.div>
 
           {/* Auth Buttons */}
@@ -29,15 +29,15 @@ const LandingHeader = () => {
           >
             <Link
               to="/auth/sign-in"
-              className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-[#16a34a] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-purple-500 transition-colors"
             >
               <FontAwesomeIcon icon={faUser} /> ログイン
             </Link>
             <Link
               to="/auth/sign-up"
-              className="flex items-center gap-2 px-4 py-2 bg-[#16a34a] text-white rounded-lg hover:bg-[#15803d] transition-all duration-300"
+              className="flex items-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-[#15803d] transition-all duration-300"
             >
-              <FontAwesomeIcon icon={faUserPlus} /> 登録
+              <FontAwesomeIcon icon={faUserPlus} /> Đăng kí
             </Link>
           </motion.div>
         </div>

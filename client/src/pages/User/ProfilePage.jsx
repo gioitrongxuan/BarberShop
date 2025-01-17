@@ -179,7 +179,7 @@ const ProfilePage = () => {
                     <div>
                       <motion.button
                         onClick={() => setEditingName(true)}
-                        className="p-2 text-gray-400 hover:text-green-600 rounded-full hover:bg-green-50 transition-colors"
+                        className="p-2 text-gray-400 hover:text-purple-600 rounded-full hover:bg-purple-50 transition-colors"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
@@ -192,7 +192,7 @@ const ProfilePage = () => {
                 <ProfileForm 
                   data={userData}
                   onEdit={handleSaveField}
-                  titleClass="text-[#16a34a]"
+                  titleClass="text-purple-500"
                 />
 
                 <ProfileActions

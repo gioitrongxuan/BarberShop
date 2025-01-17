@@ -3,20 +3,20 @@ export const SIGN_UP_FIELDS = [
     { name: "lastName", label: "姓", type: "text", icon: "fa-user" },
     {
       name: "email",
-      label: "メールアドレス",
+      label: "Địa chỉ email",
       type: "email",
       icon: "fa-envelope",
       colSpan: true,
     },
     {
       name: "password",
-      label: "パスワード",
+      label: "Mật khẩu",
       type: "password",
       icon: "fa-lock",
     },
     {
       name: "confirmPassword",
-      label: "パスワード確認",
+      label: "Xác Nhận Mật Khẩu",
       type: "password",
       icon: "fa-lock",
     },

@@ -40,11 +40,11 @@ function Dashboard() {
       <div className="grid grid-cols-2 gap-8">
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl shadow-lg p-8 text-white"
+          className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg p-8 text-white"
         >
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-green-100 text-lg mb-2">ユーザー数</h3>
+              <h3 className="text-purple-100 text-lg mb-2">ユーザー数</h3>
               <p className="text-4xl font-bold">2,000</p>
             </div>
             <div className="p-4 bg-white/20 rounded-xl">
@@ -55,11 +55,11 @@ function Dashboard() {
 
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="bg-gradient-to-br from-green-400 to-green-500 rounded-2xl shadow-lg p-8 text-white"
+          className="bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl shadow-lg p-8 text-white"
         >
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-green-100 text-lg mb-2">遊び場数</h3>
+              <h3 className="text-purple-100 text-lg mb-2">遊び場数</h3>
               <p className="text-4xl font-bold">2,000</p>
             </div>
             <div className="p-4 bg-white/20 rounded-xl">
@@ -72,11 +72,11 @@ function Dashboard() {
       {/* Graph */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="bg-white rounded-2xl shadow-lg p-8 border border-green-100"
+        className="bg-white rounded-2xl shadow-lg p-8 border border-purple-100"
       >
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-bold text-green-500">ユーザー数の推移</h3>
-          <div className="flex items-center gap-2 text-green-500">
+          <h3 className="text-xl font-bold text-purple-500">ユーザー数の推移</h3>
+          <div className="flex items-center gap-2 text-purple-500">
             <FaArrowUp />
             <span>15% 増加</span>
           </div>
@@ -120,18 +120,18 @@ function Dashboard() {
       <div className="grid grid-cols-2 gap-8">
         <motion.div
           whileHover={{ scale: 1.01 }}
-          className="bg-white rounded-2xl shadow-lg p-8 border border-green-100"
+          className="bg-white rounded-2xl shadow-lg p-8 border border-purple-100"
         >
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl font-bold text-green-500">最も人気のある遊び場</h3>
-            <FaChartLine className="text-green-500 w-6 h-6" />
+            <h3 className="text-xl font-bold text-purple-500">最も人気のある遊び場</h3>
+            <FaChartLine className="text-purple-500 w-6 h-6" />
           </div>
           <div className="overflow-hidden rounded-xl border border-gray-100">
             <table className="w-full">
-              <thead className="bg-green-50">
+              <thead className="bg-purple-50">
                 <tr>
-                  <th className="text-left py-3 px-4 text-green-700 font-medium">遊び場名</th>
-                  <th className="text-right py-3 px-4 text-green-700 font-medium">アクセス数</th>
+                  <th className="text-left py-3 px-4 text-purple-700 font-medium">遊び場名</th>
+                  <th className="text-right py-3 px-4 text-purple-700 font-medium">アクセス数</th>
                 </tr>
               </thead>
               <tbody>
@@ -142,7 +142,7 @@ function Dashboard() {
                     className="border-t border-gray-100"
                   >
                     <td className="py-3 px-4">{item.name}</td>
-                    <td className="text-right py-3 px-4 text-green-600 font-medium">
+                    <td className="text-right py-3 px-4 text-purple-600 font-medium">
                       {item.count.toLocaleString()}
                     </td>
                   </motion.tr>
@@ -154,18 +154,18 @@ function Dashboard() {
 
         <motion.div
           whileHover={{ scale: 1.01 }}
-          className="bg-white rounded-2xl shadow-lg p-8 border border-green-100"
+          className="bg-white rounded-2xl shadow-lg p-8 border border-purple-100"
         >
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl font-bold text-green-500">最も検索された遊び場</h3>
-            <FaSearch className="text-green-500 w-6 h-6" />
+            <h3 className="text-xl font-bold text-purple-500">最も検索された遊び場</h3>
+            <FaSearch className="text-purple-500 w-6 h-6" />
           </div>
           <div className="overflow-hidden rounded-xl border border-gray-100">
             <table className="w-full">
-              <thead className="bg-green-50">
+              <thead className="bg-purple-50">
                 <tr>
-                  <th className="text-left py-3 px-4 text-green-700 font-medium">遊び場名</th>
-                  <th className="text-right py-3 px-4 text-green-700 font-medium">検索回数</th>
+                  <th className="text-left py-3 px-4 text-purple-700 font-medium">遊び場名</th>
+                  <th className="text-right py-3 px-4 text-purple-700 font-medium">検索回数</th>
                 </tr>
               </thead>
               <tbody>
@@ -176,7 +176,7 @@ function Dashboard() {
                     className="border-t border-gray-100"
                   >
                     <td className="py-3 px-4">{item.name}</td>
-                    <td className="text-right py-3 px-4 text-green-600 font-medium">
+                    <td className="text-right py-3 px-4 text-purple-600 font-medium">
                       {item.count.toLocaleString()}
                     </td>
                   </motion.tr>

@@ -40,8 +40,8 @@ function AttractionSelect({
   return (
     <div className={className}>
       <div className="flex items-center space-x-2 mb-3">
-        <Sparkles className="w-5 h-5 text-green-600" />
-        <label className="text-sm font-bold text-green-600">
+        <Sparkles className="w-5 h-5 text-purple-600" />
+        <label className="text-sm font-bold text-purple-600">
           アトラクション
         </label>
       </div>
@@ -52,17 +52,17 @@ function AttractionSelect({
           {allAttractions?.slice(0, 8).map((attraction) => (
             <label
               key={attraction._id}
-              className="flex items-center space-x-2 text-sm hover:text-green-600 
+              className="flex items-center space-x-2 text-sm hover:text-purple-600 
                        transition-colors cursor-pointer group"
             >
               <input
                 type="checkbox"
                 checked={checkedAttractions[attraction._id] || false}
                 onChange={() => handleCheckboxChange(attraction._id)}
-                className="rounded border-gray-300 text-green-600 
-                         focus:ring-green-500 cursor-pointer"
+                className="rounded border-gray-300 text-purple-600 
+                         focus:ring-purple-500 cursor-pointer"
               />
-              <span className="group-hover:text-green-600 transition-colors">
+              <span className="group-hover:text-purple-600 transition-colors">
                 {attraction?.name}
               </span>
             </label>
@@ -75,9 +75,9 @@ function AttractionSelect({
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.99 }}
         onClick={handleExpandClick}
-        className="w-full px-4 py-2.5 bg-gradient-to-r from-green-600 to-green-500 
+        className="w-full px-4 py-2.5 bg-gradient-to-r from-purple-600 to-purple-500 
                  text-white font-medium rounded-xl shadow-sm
-                 hover:from-green-500 hover:to-green-400
+                 hover:from-purple-500 hover:to-purple-400
                  transition-all duration-200 flex items-center justify-center gap-2"
       >
         <Plus className="w-4 h-4" />
@@ -102,8 +102,8 @@ function AttractionSelect({
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex items-center space-x-2">
-                    <Sparkles className="w-5 h-5 text-green-600" />
-                    <h3 className="text-lg font-bold text-green-600">
+                    <Sparkles className="w-5 h-5 text-purple-600" />
+                    <h3 className="text-lg font-bold text-purple-600">
                       アトラクション
                     </h3>
                   </div>
@@ -115,8 +115,8 @@ function AttractionSelect({
                       onChange={(e) => setSearchTerm(e.target.value)}
                       placeholder="検索"
                       className="w-full pl-10 pr-4 py-2 text-sm border-2 border-gray-200 
-                             rounded-xl outline-none focus:ring-2 focus:ring-green-500/20 
-                             focus:border-green-500 hover:border-green-400 
+                             rounded-xl outline-none focus:ring-2 focus:ring-purple-500/20 
+                             focus:border-purple-500 hover:border-purple-400 
                              transition-all duration-200"
                     />
                   </div>
@@ -127,17 +127,17 @@ function AttractionSelect({
                     {filteredAttractions.map((attraction) => (
                       <label
                         key={attraction._id}
-                        className="flex items-center space-x-2 text-sm hover:text-green-600 
+                        className="flex items-center space-x-2 text-sm hover:text-purple-600 
                                  transition-colors cursor-pointer group"
                       >
                         <input
                           type="checkbox"
                           checked={checkedAttractions[attraction._id] || false}
                           onChange={() => handleCheckboxChange(attraction._id)}
-                          className="rounded border-gray-300 text-green-600 
-                                   focus:ring-green-500 cursor-pointer"
+                          className="rounded border-gray-300 text-purple-600 
+                                   focus:ring-purple-500 cursor-pointer"
                         />
-                        <span className="group-hover:text-green-600 transition-colors">
+                        <span className="group-hover:text-purple-600 transition-colors">
                           {attraction?.name}
                         </span>
                       </label>
@@ -157,11 +157,11 @@ function AttractionSelect({
                   <button
                     onClick={handleConfirm}
                     className="px-6 py-2.5 text-sm font-medium text-white 
-                           bg-gradient-to-r from-green-600 to-green-500
-                           hover:from-green-500 hover:to-green-400
+                           bg-gradient-to-r from-purple-600 to-purple-500
+                           hover:from-purple-500 hover:to-purple-400
                            rounded-xl shadow-sm hover:shadow transition-all duration-200"
                   >
-                    確認する
+                     Xác Nhận
                   </button>
                 </div>
               </div>

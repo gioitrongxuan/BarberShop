@@ -54,7 +54,7 @@ const PlaygroundDetail = () => {
     fetchAll();
   }, [id]); 
   return (
-    <div className="inset-x-0 top-16 bottom-0 bg-green-50/30" style={{ pointerEvents: isLoading ? 'none' : 'auto', opacity: isLoading ? 0.5 : 1 }}>
+    <div className="inset-x-0 top-16 bottom-0 bg-purple-50/30" style={{ pointerEvents: isLoading ? 'none' : 'auto', opacity: isLoading ? 0.5 : 1 }}>
       {isLoading && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-50/80 z-50">
           <ClipLoader size={50} color={"#123abc"} loading={isLoading} />
@@ -65,7 +65,7 @@ const PlaygroundDetail = () => {
 
         <div className="max-w-7xl mx-auto px-6 py-6">
           {/* Main content card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-6 border border-green-100">
+          <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-6 border border-purple-100">
             <div className="grid grid-cols-12 gap-8 p-6">
               <PlaygroundImage imageUrl ={playgroundData.image}/>
               <PlaygroundInfo data={playgroundData} />
@@ -73,36 +73,36 @@ const PlaygroundDetail = () => {
           </div>
 
           {/* Tabs section */}
-          <div className="bg-white rounded-xl shadow-sm border border-green-100">
+          <div className="bg-white rounded-xl shadow-sm border border-purple-100">
             {/* Tab headers */}
-            <div className="border-b border-green-100">
+            <div className="border-b border-purple-100">
               <div className="flex">
                 <button
                   className={`px-8 py-4 font-medium transition-all flex items-center gap-2 relative
                     ${activeTab === "details"
-                      ? "text-green-600 bg-green-50"
-                      : "text-gray-600 hover:text-gray-800 hover:bg-green-50"
+                      ? "text-purple-600 bg-purple-50"
+                      : "text-gray-600 hover:text-gray-800 hover:bg-purple-50"
                     }`}
                   onClick={() => setActiveTab("details")}
                 >
                   <Square className="w-5 h-5" />
                   詳細情報
                   {activeTab === "details" && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600" />
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600" />
                   )}
                 </button>
                 <button
                   className={`px-8 py-4 font-medium transition-all flex items-center gap-2 relative
                     ${activeTab === "reviews"
-                      ? "text-green-600 bg-green-50"
-                      : "text-gray-600 hover:text-gray-800 hover:bg-green-50"
+                      ? "text-purple-600 bg-purple-50"
+                      : "text-gray-600 hover:text-gray-800 hover:bg-purple-50"
                     }`}
                   onClick={() => setActiveTab("reviews")}
                 >
                   <MessageSquare className="w-5 h-5" />
                   レビュー
                   {activeTab === "reviews" && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600" />
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600" />
                   )}
                 </button>
               </div>

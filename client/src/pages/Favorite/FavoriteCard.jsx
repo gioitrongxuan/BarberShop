@@ -28,7 +28,7 @@ const FavoriteCard = ({ favorite, onRemove }) => {
   return (
     <>
       <div
-        className="w-full border rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 hover:border-green-600 bg-white cursor-pointer"
+        className="w-full border rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 hover:border-purple-600 bg-white cursor-pointer"
         onClick={handleCardClick}
       >
         <div className="relative overflow-hidden rounded-t-lg">
@@ -45,13 +45,13 @@ const FavoriteCard = ({ favorite, onRemove }) => {
           </button>
         </div>
         <div className="p-4">
-          <h2 className="text-lg font-semibold text-green-600">{name}</h2>
+          <h2 className="text-lg font-semibold text-purple-600">{name}</h2>
           <p className="mt-2 text-sm text-gray-600 flex items-center">
-            <MdPlace className="text-green-500 mr-2" />
+            <MdPlace className="text-purple-500 mr-2" />
             {address}
           </p>
-          <p className="mt-2 text-sm font-medium text-green-600 flex items-center">
-            <MdAttachMoney className="text-green-500 mr-2" />¥
+          <p className="mt-2 text-sm font-medium text-purple-600 flex items-center">
+            <MdAttachMoney className="text-purple-500 mr-2" />¥
             {parseInt(admissionFee).toLocaleString()}
           </p>
         </div>

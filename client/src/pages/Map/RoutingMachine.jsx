@@ -43,7 +43,7 @@ const RoutingMachine = ({ origin, destination, isRouteVisible, onRouteCalculated
       const marker = L.marker(latLng, {
         icon: L.divIcon({
           className: 'custom-marker',
-          html: `<div class="w-4 h-4 ${isStart ? 'bg-blue-500' : 'bg-green-500'} rounded-full border-2 border-white shadow-lg"></div>`,
+          html: `<div class="w-4 h-4 ${isStart ? 'bg-blue-500' : 'bg-purple-500'} rounded-full border-2 border-white shadow-lg"></div>`,
           iconSize: [16, 16]
         })
       });

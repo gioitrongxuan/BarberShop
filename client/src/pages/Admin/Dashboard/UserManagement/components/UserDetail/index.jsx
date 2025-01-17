@@ -48,8 +48,8 @@ function UserDetail() {
       >
         {/* Header */}
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-green-600">ユーザー情報</h1>
-          <p className="text-sm text-gray-500">ユーザーの詳細情報を確認できます。</p>
+          <h1 className="text-2xl font-bold text-purple-600">ユーザー情報</h1>
+          <p className="text-sm text-gray-500">ユーザーの詳細情報を Xác Nhậnできます。</p>
         </div>
 
         {/* User Information */}

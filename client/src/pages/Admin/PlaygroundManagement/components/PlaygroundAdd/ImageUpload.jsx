@@ -42,15 +42,15 @@ function ImageUpload({ image, onChange }) {
   return (
     <div className="space-y-3">
       <div className="flex items-center space-x-2 mb-2">
-        <Camera className="w-5 h-5 text-green-600" />
-        <label className="text-sm font-bold text-green-600">
+        <Camera className="w-5 h-5 text-purple-600" />
+        <label className="text-sm font-bold text-purple-600">
           画像アップロード
         </label>
       </div>
       <motion.div
         whileHover={{ scale: 1.01 }}
         className="relative w-full aspect-video bg-gray-50 rounded-xl border-2 border-dashed 
-                 border-gray-300 hover:border-green-500 transition-colors cursor-pointer 
+                 border-gray-300 hover:border-purple-500 transition-colors cursor-pointer 
                  overflow-hidden group"
       >
         {isLoading && (
@@ -67,9 +67,9 @@ function ImageUpload({ image, onChange }) {
 
         {!image ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-            <Upload className="w-8 h-8 text-gray-400 mb-2 group-hover:text-green-500 transition-colors" />
+            <Upload className="w-8 h-8 text-gray-400 mb-2 group-hover:text-purple-500 transition-colors" />
             <div className="text-center">
-              <p className="text-sm font-medium text-gray-600 group-hover:text-green-600 transition-colors">
+              <p className="text-sm font-medium text-gray-600 group-hover:text-purple-600 transition-colors">
                 クリックして画像をアップロード
               </p>
               <p className="text-xs text-gray-500 mt-1">

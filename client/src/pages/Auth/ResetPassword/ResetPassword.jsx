@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaEnvelope, FaPhone, FaLock, FaArrowLeft } from 'react-icons/fa';
-import backgroundImage from '../../../assets/amusement-park-animate.svg';
+import backgroundImage from '../../../assets/background_login.webp';
 
 const ResetPassword = () => {
   const [verificationMethod, setVerificationMethod] = useState('');
@@ -72,22 +72,22 @@ const ResetPassword = () => {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-center text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-green-600 mb-8 tracking-wide z-10"
-              // className="inline-block text-4xl font-bold text-green-500"
+              className="text-center text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 mb-8 tracking-wide z-10"
+              // className="inline-block text-4xl font-bold text-purple-500"
             >
-              パスワードの忘れ
+              Mật khẩuの忘れ
             </motion.span>
           </motion.div>
 
           <form className="space-y-6">
             <motion.div 
-              className="bg-green-50/80 rounded-2xl p-6"
+              className="bg-purple-50/80 rounded-2xl p-6"
               variants={formFieldAnimation}
               initial="hidden"
               animate="visible"
             >
-              <h2 className="text-xl font-semibold text-green-600 mb-4">
-                確認方法を選択してください
+              <h2 className="text-xl font-semibold text-purple-600 mb-4">
+                 Xác Nhận方法を選択してください
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 <motion.button
@@ -97,13 +97,13 @@ const ResetPassword = () => {
                   whileTap="tap"
                   className={`p-4 rounded-xl flex flex-col items-center justify-center gap-3 transition-all duration-300 ${
                     verificationMethod === 'email'
-                      ? 'bg-green-500 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-green-100'
+                      ? 'bg-purple-500 text-white shadow-lg'
+                      : 'bg-white text-gray-700 hover:bg-purple-100'
                   }`}
                   onClick={() => setVerificationMethod('email')}
                 >
-                  <FaEnvelope className={`text-2xl ${verificationMethod === 'email' ? 'text-white' : 'text-green-500'}`} />
-                  <span>メール確認</span>
+                  <FaEnvelope className={`text-2xl ${verificationMethod === 'email' ? 'text-white' : 'text-purple-500'}`} />
+                  <span>メール Xác Nhận</span>
                 </motion.button>
 
                 <motion.button
@@ -113,13 +113,13 @@ const ResetPassword = () => {
                   whileTap="tap"
                   className={`p-4 rounded-xl flex flex-col items-center justify-center gap-3 transition-all duration-300 ${
                     verificationMethod === 'phone'
-                      ? 'bg-green-500 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-green-100'
+                      ? 'bg-purple-500 text-white shadow-lg'
+                      : 'bg-white text-gray-700 hover:bg-purple-100'
                   }`}
                   onClick={() => setVerificationMethod('phone')}
                 >
-                  <FaPhone className={`text-2xl ${verificationMethod === 'phone' ? 'text-white' : 'text-green-500'}`} />
-                  <span>SMS確認</span>
+                  <FaPhone className={`text-2xl ${verificationMethod === 'phone' ? 'text-white' : 'text-purple-500'}`} />
+                  <span>SMS Xác Nhận</span>
                 </motion.button>
               </div>
             </motion.div>
@@ -133,16 +133,16 @@ const ResetPassword = () => {
               >
                 {verificationMethod === 'email' && (
                   <div className="relative">
-                    <label className="block text-lg font-medium text-green-600 mb-2">
-                      メールアドレス
+                    <label className="block text-lg font-medium text-purple-600 mb-2">
+                      Địa chỉ email
                     </label>
                     <div className="relative">
-                      <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-green-500" />
+                      <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500" />
                       <input
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 bg-white/50 border-2 border-green-100 rounded-xl focus:outline-none focus:border-green-500 transition duration-300"
+                        className="w-full pl-12 pr-4 py-3 bg-white/50 border-2 border-purple-100 rounded-xl focus:outline-none focus:border-purple-500 transition duration-300"
                         placeholder="example@email.com"
                       />
                     </div>
@@ -151,16 +151,16 @@ const ResetPassword = () => {
 
                 {verificationMethod === 'phone' && (
                   <div className="relative">
-                    <label className="block text-lg font-medium text-green-600 mb-2">
+                    <label className="block text-lg font-medium text-purple-600 mb-2">
                       電話番号
                     </label>
                     <div className="relative">
-                      <FaPhone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-green-500" />
+                      <FaPhone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500" />
                       <input
                         type="tel"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 bg-white/50 border-2 border-green-100 rounded-xl focus:outline-none focus:border-green-500 transition duration-300"
+                        className="w-full pl-12 pr-4 py-3 bg-white/50 border-2 border-purple-100 rounded-xl focus:outline-none focus:border-purple-500 transition duration-300"
                         placeholder="電話番号を入力してください"
                       />
                     </div>
@@ -168,17 +168,17 @@ const ResetPassword = () => {
                 )}
 
                 <div className="relative">
-                  <label className="block text-lg font-medium text-green-600 mb-2">
-                    新しいパスワード
+                  <label className="block text-lg font-medium text-purple-600 mb-2">
+                    新しいMật khẩu
                   </label>
                   <div className="relative">
-                    <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-green-500" />
+                    <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500" />
                     <input
                       type={showPassword ? "text" : "password"}
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
-                      className="w-full pl-12 pr-12 py-3 bg-white/50 border-2 border-green-100 rounded-xl focus:outline-none focus:border-green-500 transition duration-300"
-                      placeholder="新しいパスワードを入力"
+                      className="w-full pl-12 pr-12 py-3 bg-white/50 border-2 border-purple-100 rounded-xl focus:outline-none focus:border-purple-500 transition duration-300"
+                      placeholder="新しいMật khẩuを入力"
                     />
                     <button
                       type="button"
@@ -191,17 +191,17 @@ const ResetPassword = () => {
                 </div>
 
                 <div className="relative">
-                  <label className="block text-lg font-medium text-green-600 mb-2">
-                    新しいパスワードを確認
+                  <label className="block text-lg font-medium text-purple-600 mb-2">
+                    新しいMật khẩuを Xác Nhận
                   </label>
                   <div className="relative">
-                    <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-green-500" />
+                    <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500" />
                     <input
                       type={showPassword ? "text" : "password"}
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
-                      className="w-full pl-12 pr-12 py-3 bg-white/50 border-2 border-green-100 rounded-xl focus:outline-none focus:border-green-500 transition duration-300"
-                      placeholder="新しいパスワードを再入力"
+                      className="w-full pl-12 pr-12 py-3 bg-white/50 border-2 border-purple-100 rounded-xl focus:outline-none focus:border-purple-500 transition duration-300"
+                      placeholder="新しいMật khẩuを再入力"
                     />
                   </div>
                 </div>
@@ -211,9 +211,9 @@ const ResetPassword = () => {
                   variants={buttonVariants}
                   whileHover="hover"
                   whileTap="tap"
-                  className="w-full bg-green-500 text-white font-bold py-4 rounded-xl mt-6 transition duration-300 shadow-lg hover:bg-green-600"
+                  className="w-full bg-purple-500 text-white font-bold py-4 rounded-xl mt-6 transition duration-300 shadow-lg hover:bg-purple-600"
                 >
-                  パスワードをリセット
+                  Mật khẩuをリセット
                 </motion.button>
               </motion.div>
             )}
@@ -227,7 +227,7 @@ const ResetPassword = () => {
           >
             <Link
               to="/auth/sign-in"
-              className="inline-flex items-center text-green-600 hover:text-green-700 transition-colors duration-200 group"
+              className="inline-flex items-center text-purple-600 hover:text-purple-700 transition-colors duration-200 group"
             >
               <FaArrowLeft className="mr-2 text-sm transition-transform group-hover:-translate-x-1" />
               ログインページに戻る

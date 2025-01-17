@@ -20,7 +20,7 @@ const FilterCheckbox = ({
           style={{ width: checkboxWidth }}
         >
           <input
-            className="cursor-pointer accent-green-500"
+            className="cursor-pointer accent-purple-500"
             type="checkbox"
             value={item.name}
             checked={checkedState[index]}

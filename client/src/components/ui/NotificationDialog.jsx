@@ -31,7 +31,7 @@ const NotificationDialog = ({ isOpen, onClose, title, message, type = 'error' })
 
   const renderIcon = () => {
     if (type === 'success') {
-      return <Check className="w-5 h-5 text-green-500" />;
+      return <Check className="w-5 h-5 text-purple-500" />;
     } else {
       return <AlertTriangle className="w-5 h-5 text-red-500" />;
     }
@@ -62,7 +62,7 @@ const NotificationDialog = ({ isOpen, onClose, title, message, type = 'error' })
                 {renderIcon()}
                 <h3
                   className={`text-lg font-semibold ${
-                    type === 'success' ? 'text-green-500' : 'text-red-500'
+                    type === 'success' ? 'text-purple-500' : 'text-red-500'
                   }`}
                 >
                   {title}
@@ -88,7 +88,7 @@ const NotificationDialog = ({ isOpen, onClose, title, message, type = 'error' })
                 onClick={onClose}
                 className={`px-4 py-2 text-white rounded-lg transition-colors duration-300 ${
                   type === 'success'
-                    ? 'bg-green-500 hover:bg-green-600'
+                    ? 'bg-purple-500 hover:bg-purple-600'
                     : 'bg-red-500 hover:bg-red-600'
                 }`}
                 whileHover={{ scale: 1.02 }}
@@ -101,7 +101,7 @@ const NotificationDialog = ({ isOpen, onClose, title, message, type = 'error' })
 
           {type === 'success' && (
             <motion.div
-              className="absolute inset-0 bg-green-500 rounded-full opacity-10"
+              className="absolute inset-0 bg-purple-500 rounded-full opacity-10"
               animate={{
                 scale: [1, 1.3, 1],
                 opacity: [0.1, 0.2, 0],

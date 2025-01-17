@@ -41,7 +41,7 @@ const AttractionManagement = () => {
   };
 
   return (
-    <div className="min-h-screen p-6 bg-green-50/30">
+    <div className="min-h-screen p-6 bg-purple-50/30">
       <div className="max-w-[1400px] mx-auto space-y-6">
         <AttractionHeader onAddNew={() => handleOpenForm()} />
         
@@ -58,7 +58,7 @@ const AttractionManagement = () => {
           />
           
           <div className="flex justify-between items-center pt-4 border-t border-gray-100">
-            <p className="text-sm text-green-600">
+            <p className="text-sm text-purple-600">
               表示: {mockAttractions.length} 件
             </p>
             <Pagination

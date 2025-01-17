@@ -23,7 +23,7 @@ const FavoriteResults = ({
 
       {favorites.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-gray-500">お気に入りの遊び場はありません</p>
+          <p className="text-gray-500">Dịch vụ đã thíchはありません</p>
         </div>
       ) : (
         <Pagination

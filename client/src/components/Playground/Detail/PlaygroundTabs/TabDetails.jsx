@@ -14,9 +14,9 @@ const TabDetails = ({ data }) => {
 
   return (
     <div className="space-y-8">
-      <div className="p-6 bg-green-50/50 rounded-xl hover:shadow-md transition-all">
+      <div className="p-6 bg-purple-50/50 rounded-xl hover:shadow-md transition-all">
         <div className="flex items-center gap-2 mb-4">
-          <BookOpen className="w-6 h-6 text-green-600" />
+          <BookOpen className="w-6 h-6 text-purple-600" />
           <h3 className="text-lg font-semibold text-gray-900">施設の説明</h3>
         </div>
         <p className="text-gray-700 leading-relaxed">
@@ -27,18 +27,18 @@ const TabDetails = ({ data }) => {
         </p>
       </div>
 
-      <div className="p-6 bg-green-50/50 rounded-xl hover:shadow-md transition-all">
+      <div className="p-6 bg-purple-50/50 rounded-xl hover:shadow-md transition-all">
         <div className="flex items-center gap-2 mb-6">
-          <Sparkles className="w-6 h-6 text-green-600" />
+          <Sparkles className="w-6 h-6 text-purple-600" />
           <h3 className="text-lg font-semibold text-gray-900">アトラクション</h3>
         </div>
         <div className="grid grid-cols-2 gap-4">
           {attractions.map((attraction, index) => (
             <div 
               key={index}
-              className="flex items-center gap-3 p-4 bg-white rounded-lg border border-green-100 hover:border-green-200 hover:shadow-sm transition-all"
+              className="flex items-center gap-3 p-4 bg-white rounded-lg border border-purple-100 hover:border-purple-200 hover:shadow-sm transition-all"
             >
-              <div className="w-2 h-2 rounded-full bg-green-500"></div>
+              <div className="w-2 h-2 rounded-full bg-purple-500"></div>
               <span className="text-gray-700">{attraction}</span>
             </div>
           ))}

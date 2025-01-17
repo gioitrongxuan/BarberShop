@@ -89,7 +89,7 @@ const userDeleteHandler = async (userId) => {
       >
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-green-600">ユーザー管理</h1>
+          <h1 className="text-2xl font-bold text-purple-600">ユーザー管理</h1>
           <p className="text-sm text-gray-500">ユーザーの一覧と管理が可能です。</p>
         </div>
 

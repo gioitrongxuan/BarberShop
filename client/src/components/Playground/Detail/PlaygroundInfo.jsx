@@ -26,7 +26,7 @@ const PlaygroundInfo = ({ data }) => {
   }, [data.id]);
 
   const getRatingColor = (rating) => {
-    if (rating >= 4.5) return "text-green-600";
+    if (rating >= 4.5) return "text-purple-600";
     if (rating >= 4.0) return "text-blue-600";
     if (rating >= 3.0) return "text-yellow-600";
     if (rating >= 2.0) return "text-orange-600";
@@ -107,8 +107,8 @@ const PlaygroundInfo = ({ data }) => {
 
           <div className="space-y-4">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-green-600" />
+              <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-purple-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-500">所在地</p>
@@ -117,8 +117,8 @@ const PlaygroundInfo = ({ data }) => {
             </div>
 
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
-                <DollarSign className="w-5 h-5 text-green-600" />
+              <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center">
+                <DollarSign className="w-5 h-5 text-purple-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-500">入場料</p>
@@ -135,8 +135,8 @@ const PlaygroundInfo = ({ data }) => {
               flex items-center justify-center gap-2 
               ${
                 isFavorite
-                  ? "bg-green-600 hover:bg-green-700 text-white"
-                  : "bg-white border-2 border-gray-200 hover:border-green-600 text-gray-700 hover:text-green-600"
+                  ? "bg-purple-600 hover:bg-purple-700 text-white"
+                  : "bg-white border-2 border-gray-200 hover:border-purple-600 text-gray-700 hover:text-purple-600"
               }`}
           >
             <Heart className={`w-5 h-5 ${isFavorite ? "fill-current" : ""}`} />
@@ -145,8 +145,8 @@ const PlaygroundInfo = ({ data }) => {
 
           <button
             onClick={handleRouteClick}
-            className="h-12 px-8 bg-green-600 text-white rounded-lg font-medium
-              hover:bg-green-700 transition-all duration-300 flex items-center justify-center gap-2"
+            className="h-12 px-8 bg-purple-600 text-white rounded-lg font-medium
+              hover:bg-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
           >
             <MapPin className="w-5 h-5" />
             道順

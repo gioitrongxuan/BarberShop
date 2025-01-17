@@ -225,13 +225,13 @@ const MapPage = ({}) => {
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full" />
                   <span className="text-sm text-gray-600">
                     所要時間: {routeInfo.duration}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full" />
                   <span className="text-sm text-gray-600">
                     距離: {routeInfo.distance}
                   </span>
@@ -250,7 +250,7 @@ const MapPage = ({}) => {
             className="absolute inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-50"
           >
             <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="w-8 h-8 border-4 border-green-500 border-t-transparent rounded-full animate-spin" />
+              <div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin" />
             </div>
           </motion.div>
         )}

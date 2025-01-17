@@ -1,7 +1,7 @@
 const WHITELIST_DOMAIN = [
   'http://localhost:5173',
-  'https://lumiroo-phuc-daos-projects.vercel.app',
-  'https://lumiroo-phuc-daos-projects.vercel.app/',
+  'https://barber-shop-683bo97j0-gioitrongxuans-projects.vercel.app/',
+  'https://baythancattoc.vercel.app/',
 ]
 
 const corsConfig = {

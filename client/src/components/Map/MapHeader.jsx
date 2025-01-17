@@ -6,7 +6,7 @@ const MapHeader = ({ playgroundName }) => {
   const navigate = useNavigate();
 
   const breadcrumbItems = [
-    { label: 'ホームページ', path: '/' },
+    { label: 'Trang chủ', path: '/' },
     { label: '遊び場検索', path: '/playground-recommendation' },
     { label: playgroundName, path: '/playground-detail' },
     { label: '道順', path: null }
@@ -24,12 +24,12 @@ const MapHeader = ({ playgroundName }) => {
               {item.path ? (
                 <button
                   onClick={() => navigate(item.path)}
-                  className="text-gray-600 hover:text-green-600 transition-colors"
+                  className="text-gray-600 hover:text-purple-600 transition-colors"
                 >
                   {item.label}
                 </button>
               ) : (
-                <span className="text-green-600">{item.label}</span>
+                <span className="text-purple-600">{item.label}</span>
               )}
             </React.Fragment>
           ))}

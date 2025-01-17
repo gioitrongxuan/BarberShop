@@ -24,7 +24,7 @@ const ReviewFilters = ({reviews,setFilteredReviews}) => {
   ];
 
   return (
-    <div className="bg-green-50 border border-green-100 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+    <div className="bg-purple-50 border border-purple-100 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
       <div className="flex justify-end gap-2">
         {filters.map((filter) => (
           <button
@@ -32,12 +32,12 @@ const ReviewFilters = ({reviews,setFilteredReviews}) => {
             onClick={() => setSelectedFilter(filter.value)}
             className={`relative px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 overflow-hidden
               ${filter.value === selectedFilter
-                ? "bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg scale-105"
-                : "bg-white text-gray-600 hover:bg-green-50 hover:text-green-600 hover:scale-105"
+                ? "bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-lg scale-105"
+                : "bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-600 hover:scale-105"
               }
               before:absolute before:inset-0 before:bg-white before:opacity-0 hover:before:opacity-20 
               before:transition-opacity before:duration-300
-              border border-transparent hover:border-green-200`}
+              border border-transparent hover:border-purple-200`}
           >
             {filter.value !== "すべて" && (
               <div className="flex items-center gap-0.5">

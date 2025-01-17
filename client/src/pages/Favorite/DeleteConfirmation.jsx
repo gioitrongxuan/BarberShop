@@ -43,10 +43,10 @@ const DeleteConfirmation = ({ isOpen, onClose, onConfirm, playgroundName }) => {
           </button>
           <button
             onClick={onConfirm}
-            className="flex-1 py-2 px-4 bg-green-600 text-white hover:bg-green-700 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+            className="flex-1 py-2 px-4 bg-purple-600 text-white hover:bg-purple-700 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
           >
             <MdCheck className="w-5 h-5" />
-            確認する
+             Xác Nhận
           </button>
         </AlertDialogFooter>
       </AlertDialogContent>

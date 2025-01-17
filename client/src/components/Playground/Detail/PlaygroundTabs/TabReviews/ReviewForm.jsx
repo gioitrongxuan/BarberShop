@@ -37,7 +37,7 @@ const ReviewForm = ({playgroundId,onReviewSubmit}) => {
   };
 
   return (
-    <div className="mt-8 bg-green-50/50 rounded-xl border border-green-100 overflow-hidden">
+    <div className="mt-8 bg-purple-50/50 rounded-xl border border-purple-100 overflow-hidden">
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-6 text-gray-900">レビューを書く</h3>
         
@@ -67,15 +67,15 @@ const ReviewForm = ({playgroundId,onReviewSubmit}) => {
               </button>
             ))}
           </div>
-          <span className="text-green-600 font-medium mt-4">
+          <span className="text-purple-600 font-medium mt-4">
             {rating ? starLabels[rating] : "評価を選択してください"}
           </span>
         </div>
 
         <div className="relative mb-6">
           <textarea
-            className="w-full min-h-[150px] p-4 border border-green-100 rounded-xl resize-none
-              focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent
+            className="w-full min-h-[150px] p-4 border border-purple-100 rounded-xl resize-none
+              focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent
               transition-all bg-white"
             placeholder="体験を共有してください..."
             value={content}
@@ -90,7 +90,7 @@ const ReviewForm = ({playgroundId,onReviewSubmit}) => {
           <button
             onClick={handleSubmit}
             disabled={!rating || !content.trim()}
-            className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700
+            className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700
               transition-colors flex items-center gap-2 disabled:opacity-50
               disabled:cursor-not-allowed font-medium"
           >

@@ -34,7 +34,7 @@ const FeatureCard = ({ title, description, icon: Icon, index, color }) => {
 
         {/* Content */}
         <div className="relative z-10">
-          <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-[#16a34a] transition-colors">
+          <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-purple-500 transition-colors">
             {title}
           </h3>
           <p className="text-gray-600 leading-relaxed">
@@ -43,7 +43,7 @@ const FeatureCard = ({ title, description, icon: Icon, index, color }) => {
         </div>
 
         {/* Bottom Accent */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#16a34a] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </motion.div>
     </motion.div>
   );
@@ -61,13 +61,13 @@ const FeaturesSection = () => {
       title: "安全な環境",
       description: "すべての遊び場は厳密な安全基準を満たしています。",
       icon: Shield,
-      color: "#16a34a" // Darker green for variety
+      color: "#16a34a" // Darker purple for variety
     },
     {
       title: "コミュニティ",
       description: "他の家族との交流や情報共有が可能です。",
       icon: Users,
-      color: "#16a34a" // Lighter green for variety  
+      color: "#16a34a" // Lighter purple for variety  
     }
   ];
 
@@ -83,7 +83,7 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Lumirooの<span className="text-[#16a34a]">主な機能</span>
+            Bảy thanh cắt tóc<span className="text-purple-500">主な機能</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             子育て家族のための安全で楽しい遊び場探しをサポートする機能をご用意しています。

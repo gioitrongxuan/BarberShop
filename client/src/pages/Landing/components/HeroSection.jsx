@@ -74,7 +74,7 @@ const HeroSection = () => {
             <motion.button
               key={index}
               className={`w-2 h-2 rounded-full ${
-                index === currentImage ? 'bg-[#16a34a]' : 'bg-white/50'
+                index === currentImage ? 'bg-purple-500' : 'bg-white/50'
               }`}
               onClick={() => setCurrentImage(index)}
               whileHover={{ scale: 1.2 }}
@@ -101,14 +101,14 @@ const HeroSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-[#e9f6e9] text-[#16a34a] text-sm font-medium">
+              <span className="inline-block px-4 py-2 rounded-full bg-[#e9f6e9] text-purple-500 text-sm font-medium">
                 新しい遊び場を見つけよう
               </span>
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               ルミルーと
-              <span className="text-[#16a34a] relative">
+              <span className="text-purple-500 relative">
                 遊びに行こう
                 <motion.svg
                   className="absolute -bottom-2 left-0 w-full"
@@ -139,7 +139,7 @@ const HeroSection = () => {
             >
               <Link
                 to="/auth/sign-in"
-                className="group inline-flex items-center gap-2 bg-[#16a34a] text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg shadow-[#16a34a]/25 hover:bg-[#15803d] transition-all duration-300"
+                className="group inline-flex items-center gap-2 bg-purple-500 text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg shadow-purple-500/25 hover:bg-[#15803d] transition-all duration-300"
               >
                 始める
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

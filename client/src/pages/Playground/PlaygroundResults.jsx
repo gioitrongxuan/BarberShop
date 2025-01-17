@@ -18,7 +18,7 @@ const PlaygroundResults = ({
     >
           {/* Nội dung chính */}
       <div className="bg-white p-4 rounded-lg shadow-md flex flex-col flex-grow">
-        <h2 className="text-xl font-bold text-green-600 mb-4">
+        <h2 className="text-xl font-bold text-purple-600 mb-4">
           おすすめの遊び場
         </h2>
 

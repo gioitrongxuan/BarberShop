@@ -15,7 +15,7 @@ const PriceInput = ({ value, onChange }) => {
       onChange={handleChangeValue}
       min="0"
       max="9999999"
-      className="border rounded-md w-20 text-sm text-center py-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+      className="border rounded-md w-20 text-sm text-center py-1 focus:outline-none focus:ring-2 focus:ring-purple-500"
       placeholder="入力する"
     />
   );

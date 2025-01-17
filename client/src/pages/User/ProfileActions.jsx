@@ -84,7 +84,7 @@ const ProfileActions = ({ onSave, onLogout }) => {
         
         <motion.button
           onClick={() => setShowSaveConfirm(true)}
-          className="flex items-center gap-2 px-6 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out shadow-sm hover:shadow-md group"
+          className="flex items-center gap-2 px-6 py-2.5 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all duration-300 ease-in-out shadow-sm hover:shadow-md group"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
@@ -110,7 +110,7 @@ const ProfileActions = ({ onSave, onLogout }) => {
           >
             <div className="bg-white rounded-full shadow-lg py-3 px-6 flex items-center gap-3">
               <motion.div 
-                className="bg-green-100 rounded-full p-1"
+                className="bg-purple-100 rounded-full p-1"
                 initial={{ rotate: -180, opacity: 0 }}
                 animate={{ 
                   rotate: 0,
@@ -118,7 +118,7 @@ const ProfileActions = ({ onSave, onLogout }) => {
                   transition: { delay: 0.2 }
                 }}
               >
-                <Check className="w-4 h-4 text-green-600" />
+                <Check className="w-4 h-4 text-purple-600" />
               </motion.div>
               <motion.span
                 className="text-gray-700 font-medium"
@@ -132,7 +132,7 @@ const ProfileActions = ({ onSave, onLogout }) => {
                 変更が正常に保存されました
               </motion.span>
               <motion.div
-                className="absolute inset-0 bg-green-500 rounded-full opacity-10"
+                className="absolute inset-0 bg-purple-500 rounded-full opacity-10"
                 animate={{
                   scale: [1, 1.3, 1],
                   opacity: [0.1, 0.2, 0],
@@ -179,7 +179,7 @@ const ProfileActions = ({ onSave, onLogout }) => {
 
               <div className="text-center">
                 <motion.div
-                  className="relative w-20 h-20 mx-auto mb-5 bg-gradient-to-br from-green-50 to-green-100 rounded-full flex items-center justify-center"
+                  className="relative w-20 h-20 mx-auto mb-5 bg-gradient-to-br from-purple-50 to-purple-100 rounded-full flex items-center justify-center"
                   initial={{ scale: 0 }}
                   animate={{ 
                     scale: 1,
@@ -192,7 +192,7 @@ const ProfileActions = ({ onSave, onLogout }) => {
                   }}
                 >
                   <motion.div
-                    className="absolute inset-0 bg-green-100 rounded-full"
+                    className="absolute inset-0 bg-purple-100 rounded-full"
                     animate={{
                       scale: [1, 1.2, 1],
                       opacity: [0.3, 0.1, 0.3],
@@ -214,12 +214,12 @@ const ProfileActions = ({ onSave, onLogout }) => {
                       }
                     }}
                   >
-                    <Check className="w-10 h-10 text-green-500 relative z-10" />
+                    <Check className="w-10 h-10 text-purple-500 relative z-10" />
                   </motion.div>
                 </motion.div>
 
                 <motion.h2
-                  className="text-2xl font-bold mb-3 bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent"
+                  className="text-2xl font-bold mb-3 bg-gradient-to-r from-purple-500 to-purple-600 bg-clip-text text-transparent"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ 
                     opacity: 1, 
@@ -254,7 +254,7 @@ const ProfileActions = ({ onSave, onLogout }) => {
                   </motion.button>
 
                   <motion.button
-                    className="flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl font-medium hover:from-green-600 hover:to-green-700 transition-colors shadow-lg shadow-green-500/30"
+                    className="flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl font-medium hover:from-purple-600 hover:to-purple-700 transition-colors shadow-lg shadow-purple-500/30"
                     whileHover={{ scale: 1.03, x: 5 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={handleSave}

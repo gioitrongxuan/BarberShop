@@ -1,8 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import amusementParkSVG from "../../../assets/amusement-park-animate.svg";
-import lottieAnimation from "../../../assets/ride-animation.json";
+import amusementParkSVG from "../../../assets/background_login.webp";
+import lottieAnimation from "../../../assets/anhcattoc.png";
+// import lottieAnimation from "../../../assets/ride-animation.json";
 import TransitionWrapper from "../../../components/TransitionWrapper";
 import { signIn } from "../../../apis/auth";
 import SignInLeft from "../../../components/Auth/SignInLeft";
@@ -25,7 +26,7 @@ const SignIn = () => {
         <SignInLeft lottieAnimation={lottieAnimation} />
 
         <motion.div
-          className="w-1/2 bg-gradient-to-b from-white to-green-50 flex flex-col justify-center items-center p-10 shadow-2xl relative"
+          className="w-1/2 bg-gradient-to-b from-white to-purple-50 flex flex-col justify-center items-center p-10 shadow-2xl relative"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -37,13 +38,13 @@ const SignIn = () => {
           />
 
           <motion.h1
-            className="text-center text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-green-600 mb-8 tracking-wide z-10"
+            className="text-center text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 mb-8 tracking-wide z-10"
             whileHover={{ scale: 1.1 }}
           >
-            サインイン
+            Đăng nhập
           </motion.h1>
-          <p className="text-lg font-bold text-green-700 bg-green-100 p-2 rounded-lg mb-8 z-10">
-            楽しい時間を見つけるための最適な場所！
+          <p className="text-lg font-bold text-purple-700 bg-purple-100 p-2 rounded-lg mb-8 z-10">
+            Hãy khám phá những phong cách mới !
           </p>
 
           <SignInForm

@@ -9,7 +9,7 @@ const LoadingScreen = () => {
         {[...Array(3)].map((_, index) => (
           <motion.span
             key={index}
-            className="w-4 h-4 rounded-full bg-[#16a34a]"
+            className="w-4 h-4 rounded-full bg-purple-500"
             animate={{
               y: [0, -10, 0], // Move up and down
               opacity: [0.7, 1, 0.7], // Fade in and out

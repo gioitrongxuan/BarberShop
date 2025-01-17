@@ -17,10 +17,10 @@ const SignUpForm = ({
     >
       {/* Title */}
       <motion.h2
-        className="text-3xl font-bold text-center text-green-600 mb-8"
+        className="text-3xl font-bold text-center text-purple-600 mb-8"
         whileHover={{ scale: 1.05 }}
       >
-        登録
+        Đăng kí
       </motion.h2>
 
       <motion.form onSubmit={onSubmit} className="space-y-6">
@@ -32,7 +32,7 @@ const SignUpForm = ({
               className="block w-32 h-32 rounded-full cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="relative w-full h-full rounded-full border-2 border-green-500 overflow-hidden">
+              <div className="relative w-full h-full rounded-full border-2 border-purple-500 overflow-hidden">
                 {formData.avatarUrl ? (
                   <img
                     src={formData.avatarUrl}
@@ -41,7 +41,7 @@ const SignUpForm = ({
                   />
                 ) : (
                   <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <Plus className="w-8 h-8 text-green-500" />
+                    <Plus className="w-8 h-8 text-purple-500" />
                   </div>
                 )}
               </div>
@@ -59,19 +59,19 @@ const SignUpForm = ({
           <div className="flex-1 space-y-4">
             {/* Email */}
             <div>
-              <label className="text-base font-bold text-green-600 mb-1 block">
-                メールアドレス
+              <label className="text-base font-bold text-purple-600 mb-1 block">
+                Địa chỉ email
               </label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-500" />
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={onInputChange}
-                  placeholder="例: abc12345@gmail.com"
+                  placeholder="VD: abc12345@gmail.com"
                   required
-                  className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
                 />
               </div>
             </div>
@@ -79,35 +79,35 @@ const SignUpForm = ({
             {/* Password Section */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="text-base font-bold text-green-600 mb-1 block">
-                  パスワード
+                <label className="text-base font-bold text-purple-600 mb-1 block">
+                  Mật khẩu
                 </label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" />
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-500" />
                   <input
                     type="password"
                     name="password"
                     value={formData.password}
                     onChange={onInputChange}
                     required
-                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-base font-bold text-green-600 mb-1 block">
-                  パスワード確認
+                <label className="text-base font-bold text-purple-600 mb-1 block">
+                  Xác Nhận Mật Khẩu
                 </label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" />
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-500" />
                   <input
                     type="password"
                     name="confirmPassword"
                     value={formData.confirmPassword}
                     onChange={onInputChange}
                     required
-                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -116,28 +116,28 @@ const SignUpForm = ({
             {/* Birthday & Gender */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="text-base font-bold text-green-600 mb-1 block">
-                  生年月日
+                <label className="text-base font-bold text-purple-600 mb-1 block">
+                  Ngày tháng năm sinh
                 </label>
                 <div className="relative">
-                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" />
+                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-500" />
                   <input
                     type="date"
                     name="birthDate"
                     value={formData.birthDate}
                     onChange={onInputChange}
                     required
-                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-base font-bold text-green-600 mb-1 block">
-                    性別
+                <label className="text-base font-bold text-purple-600 mb-1 block">
+                    Giới tính
                 </label>
                 <div className="relative flex items-center h-[38px]">
-                    <User2 className="w-5 h-5 text-green-500 mr-2" />
+                    <User2 className="w-5 h-5 text-purple-500 mr-2" />
                     <div className="flex items-center gap-6">
                     {["男性", "女性", "その他"].map((gender) => (
                         <label key={gender} className="inline-flex items-center whitespace-nowrap">
@@ -147,7 +147,7 @@ const SignUpForm = ({
                             value={gender}
                             checked={formData.gender === gender}
                             onChange={onInputChange}
-                            className="w-4 h-4 accent-green-500"
+                            className="w-4 h-4 accent-purple-500"
                         />
                         <span className="ml-1 text-gray-700">{gender.split('').map((char, i) => (
                             <span key={i} className="inline-block">{char}</span>
@@ -162,35 +162,35 @@ const SignUpForm = ({
             {/* Name Fields */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="text-base font-bold text-green-600 mb-1 block">
-                  名
+                <label className="text-base font-bold text-purple-600 mb-1 block">
+                  Tên
                 </label>
                 <div className="relative">
-                  <User2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" />
+                  <User2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-500" />
                   <input
                     type="text"
                     name="firstName"
                     value={formData.firstName}
                     onChange={onInputChange}
                     required
-                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-base font-bold text-green-600 mb-1 block">
-                  姓
+                <label className="text-base font-bold text-purple-600 mb-1 block">
+                  Họ
                 </label>
                 <div className="relative">
-                  <User2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" />
+                  <User2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-500" />
                   <input
                     type="text"
                     name="lastName"
                     value={formData.lastName}
                     onChange={onInputChange}
                     required
-                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -198,34 +198,34 @@ const SignUpForm = ({
 
             {/* Address */}
             <div>
-              <label className="text-base font-bold text-green-600 mb-1 block">
-                住所
+              <label className="text-base font-bold text-purple-600 mb-1 block">
+                Địa chỉ
               </label>
               <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" />
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-500" />
                 <input
                   type="text"
                   name="address"
                   value={formData.address}
                   onChange={onInputChange}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
                 />
               </div>
             </div>
 
             {/* Phone */}
             <div>
-              <label className="text-base font-bold text-green-600 mb-1 block">
-                電話番号
+              <label className="text-base font-bold text-purple-600 mb-1 block">
+               Số điện thoại
               </label>
               <div className="relative">
-                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" />
+                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-500" />
                 <input
                   type="tel"
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={onInputChange}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
                 />
               </div>
             </div>
@@ -234,18 +234,18 @@ const SignUpForm = ({
 
         {errorConfirmPassword && (
           <p className="text-sm text-red-600 text-center">
-            正しい確認パスワードを入力してください
+            正しい Xác NhậnMật khẩuを入力してください
           </p>
         )}
 
         <div className="flex justify-end">
           <motion.button
             type="submit"
-            className="px-10 py-2.5 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
+            className="px-10 py-2.5 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            登録
+            Đăng kí
           </motion.button>
         </div>
       </motion.form>

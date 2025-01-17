@@ -40,8 +40,8 @@ const FavoritePage = () => {
     <div className="min-h-screen pt-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-left text-[#16a34a] mb-4">
-            お気に入りの遊び場
+          <h1 className="text-2xl font-bold text-left text-purple-500 mb-4">
+            Dịch vụ đã thích
           </h1>
           <SearchBar
             searchQuery={searchQuery}

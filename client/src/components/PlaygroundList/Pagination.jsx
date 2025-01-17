@@ -18,7 +18,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       <button
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
-        className="px-4 py-2 mx-1 border rounded-lg text-gray-500 bg-white hover:bg-green-600 hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
+        className="px-4 py-2 mx-1 border rounded-lg text-gray-500 bg-white hover:bg-purple-600 hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <FaArrowLeft />
       </button>
@@ -27,7 +27,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <>
           <button
             onClick={() => onPageChange(1)}
-            className="px-4 py-2 mx-1 border rounded-lg bg-white text-gray-600 hover:bg-green-600 hover:text-white"
+            className="px-4 py-2 mx-1 border rounded-lg bg-white text-gray-600 hover:bg-purple-600 hover:text-white"
           >
             1
           </button>
@@ -41,8 +41,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           onClick={() => onPageChange(page)}
           className={`px-4 py-2 mx-1 border rounded-lg transition ${
             currentPage === page
-              ? "bg-green-600 text-white shadow-md"
-              : "bg-white text-gray-600 hover:bg-green-600 hover:text-white"
+              ? "bg-purple-600 text-white shadow-md"
+              : "bg-white text-gray-600 hover:bg-purple-600 hover:text-white"
           }`}
         >
           {page}
@@ -54,7 +54,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           {endPage < totalPages - 1 && <span className="px-2 text-gray-500">...</span>}
           <button
             onClick={() => onPageChange(totalPages)}
-            className="px-4 py-2 mx-1 border rounded-lg bg-white text-gray-600 hover:bg-green-600 hover:text-white"
+            className="px-4 py-2 mx-1 border rounded-lg bg-white text-gray-600 hover:bg-purple-600 hover:text-white"
           >
             {totalPages}
           </button>
@@ -64,7 +64,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       <button
         disabled={currentPage === totalPages}
         onClick={() => onPageChange(currentPage + 1)}
-        className="px-4 py-2 mx-1 border rounded-lg text-gray-500 bg-white hover:bg-green-600 hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
+        className="px-4 py-2 mx-1 border rounded-lg text-gray-500 bg-white hover:bg-purple-600 hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <FaArrowRight />
       </button>

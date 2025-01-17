@@ -18,7 +18,7 @@ const PlaygroundInfoCard = ({ data }) => {
 
   return (
     <div 
-      className="w-full border rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 hover:border-green-600 bg-white cursor-pointer"
+      className="w-full border rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105 hover:border-purple-600 bg-white cursor-pointer"
       onClick={handleCardClick}
     >
       {/* Hình ảnh */}
@@ -31,16 +31,16 @@ const PlaygroundInfoCard = ({ data }) => {
       </div>
       <div className="p-4 flex items-center justify-between">
         <div>
-          <h3 className="text-lg font-bold text-green-600">{name}</h3>
+          <h3 className="text-lg font-bold text-purple-600">{name}</h3>
           <p 
-            className="text-sm text-gray-500 flex items-center hover:text-green-600"
+            className="text-sm text-gray-500 flex items-center hover:text-purple-600"
             onClick={() => navigate("/map")}
           >
-            <MdPlace className="text-green-500 mr-2" />
+            <MdPlace className="text-purple-500 mr-2" />
             {address}
           </p>
           <p className="text-sm text-gray-500 flex items-center">
-            <MdAttachMoney className="text-green-500 mr-2" />
+            <MdAttachMoney className="text-purple-500 mr-2" />
             {admissionFee}
           </p>
         </div>

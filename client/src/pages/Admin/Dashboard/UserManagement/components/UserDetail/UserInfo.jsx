@@ -141,10 +141,10 @@ function UserInfo({ data }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="bg-white rounded-xl shadow-lg border-2 border-green-500/20 overflow-visible relative"
+      className="bg-white rounded-xl shadow-lg border-2 border-purple-500/20 overflow-visible relative"
     >
       {/* User Avatar Section */}
-      <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-green-50 to-green-100">
+      <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-purple-50 to-purple-100">
         <div className="flex items-center space-x-6">
           <motion.div 
             whileHover={{ scale: 1.05 }}
@@ -158,7 +158,7 @@ function UserInfo({ data }) {
             />
           </motion.div>
           <div>
-            <h2 className="text-2xl font-bold text-green-600 mb-1">{data?.name}</h2>
+            <h2 className="text-2xl font-bold text-purple-600 mb-1">{data?.name}</h2>
             <p className="text-sm text-gray-600">{data?.email}</p>
           </div>
         </div>
@@ -172,8 +172,8 @@ function UserInfo({ data }) {
           whileHover={{ scale: 1.01 }}
         >
           <div className="flex items-center space-x-2">
-            <MapPin className="w-5 h-5 text-green-600" />
-            <label className="text-sm font-bold text-green-600">住所</label>
+            <MapPin className="w-5 h-5 text-purple-600" />
+            <label className="text-sm font-bold text-purple-600">住所</label>
           </div>
           <div className="px-4 py-3 bg-gray-50 rounded-xl text-sm text-gray-900 shadow-sm hover:bg-gray-100 transition-colors">
             {data?.address}
@@ -186,8 +186,8 @@ function UserInfo({ data }) {
           whileHover={{ scale: 1.01 }}
         >
           <div className="flex items-center space-x-2">
-            <Calendar className="w-5 h-5 text-green-600" />
-            <label className="text-sm font-bold text-green-600">生年月日</label>
+            <Calendar className="w-5 h-5 text-purple-600" />
+            <label className="text-sm font-bold text-purple-600">Ngày tháng năm sinh</label>
           </div>
           <div className="px-4 py-3 bg-gray-50 rounded-xl text-sm text-gray-900 shadow-sm hover:bg-gray-100 transition-colors">
             {data?.birthDate}
@@ -201,14 +201,14 @@ function UserInfo({ data }) {
            transition={{ type: "spring", stiffness: 300 }}
          >
          <div className="flex items-center space-x-2">
-            <Activity className="w-5 h-5 text-green-600" />
-            <label className="text-sm font-bold text-green-600">ステータス</label>
+            <Activity className="w-5 h-5 text-purple-600" />
+            <label className="text-sm font-bold text-purple-600">ステータス</label>
           </div>
            <div className="relative" ref={dropdownRef_stt}>
              <button
                onClick={() => setShowStatusDropdown(!showStatusDropdown)}
                className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl
-                        text-left hover:border-green-400 focus:ring-0 focus:border-green-500
+                        text-left hover:border-purple-400 focus:ring-0 focus:border-purple-500
                         transition-all duration-200 text-sm shadow-sm hover:shadow-md outline-none"
              >
                <div className="flex items-center justify-between">
@@ -241,8 +241,8 @@ function UserInfo({ data }) {
                       style={{ pointerEvents: 'auto' }}
                       className={`z-50 w-full px-4 py-3 text-sm text-left transition-colors
                         ${it.name === selectedStatus
-                          ? 'bg-green-100 text-green-600 font-bold' 
-                          : 'text-gray-700 hover:text-green-600'}`}
+                          ? 'bg-purple-100 text-purple-600 font-bold' 
+                          : 'text-gray-700 hover:text-purple-600'}`}
                     >
                       {it.name}
                     </motion.button>
@@ -260,14 +260,14 @@ function UserInfo({ data }) {
            transition={{ type: "spring", stiffness: 300 }}
          >
            <div className="flex items-center space-x-2">
-            <UserCheck className="w-5 h-5 text-green-600" />
-            <label className="text-sm font-bold text-green-600">役割</label>
+            <UserCheck className="w-5 h-5 text-purple-600" />
+            <label className="text-sm font-bold text-purple-600">役割</label>
           </div>
            <div className="relative" ref={dropdownRef}>
              <button
                onClick={() => setShowRoleDropdown(!showRoleDropdown)}
                className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl
-                        text-left hover:border-green-400 focus:ring-0 focus:border-green-500
+                        text-left hover:border-purple-400 focus:ring-0 focus:border-purple-500
                         transition-all duration-200 text-sm shadow-sm hover:shadow-md outline-none"
              >
                <div className="flex items-center justify-between">
@@ -301,8 +301,8 @@ function UserInfo({ data }) {
                       style={{ pointerEvents: 'auto' }}
                       className={`z-50 w-full px-4 py-3 text-sm text-left transition-colors
                         ${role.name === selectedRole
-                          ? 'bg-green-100 text-green-600 font-bold' 
-                          : 'text-gray-700 hover:text-green-600'}`}
+                          ? 'bg-purple-100 text-purple-600 font-bold' 
+                          : 'text-gray-700 hover:text-purple-600'}`}
                     >
                       {role.name}
                     </motion.button>
@@ -334,9 +334,9 @@ function UserInfo({ data }) {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={handleUpdate}
-            className="px-6 py-2.5 bg-gradient-to-r from-green-600 to-green-500 
-                    text-white font-bold rounded-xl text-sm border-2 border-green-500
-                    shadow-lg hover:shadow-xl hover:from-green-500 hover:to-green-400
+            className="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-purple-500 
+                    text-white font-bold rounded-xl text-sm border-2 border-purple-500
+                    shadow-lg hover:shadow-xl hover:from-purple-500 hover:to-purple-400
                     transition-all duration-200"
           >
             完了

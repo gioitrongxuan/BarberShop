@@ -105,21 +105,21 @@ function Header({ role }) {
           >
             <Link
               to="/home"
-              className={`flex items-center gap-2 transition duration-300 ${isActive("/home") ? "text-green-500 border-b-2 border-green-500" : "hover:text-green-500"}`}
+              className={`flex items-center gap-2 transition duration-300 ${isActive("/home") ? "text-purple-500 border-b-2 border-purple-500" : "hover:text-purple-500"}`}
             >
-              <FontAwesomeIcon icon={faHome} /> ホームページ
+              <FontAwesomeIcon icon={faHome} /> Trang chủ
             </Link>
             <Link
               to="/playground-recommendation"
-              className={`flex items-center gap-2 transition duration-300 ${isActive("/playground-recommendation") ? "text-green-500 border-b-2 border-green-500" : "hover:text-green-500"}`}
+              className={`flex items-center gap-2 transition duration-300 ${isActive("/playground-recommendation") ? "text-purple-500 border-b-2 border-purple-500" : "hover:text-purple-500"}`}
             >
-              <FontAwesomeIcon icon={faSearch} /> 遊び/編集検索
+              <FontAwesomeIcon icon={faSearch} /> Tìm dịch vụ
             </Link>
             <Link
               to="/favorites"
-              className={`flex items-center gap-2 transition duration-300 ${isActive("/favorites") ? "text-green-500 border-b-2 border-green-500" : "hover:text-green-500"}`}
+              className={`flex items-center gap-2 transition duration-300 ${isActive("/favorites") ? "text-purple-500 border-b-2 border-purple-500" : "hover:text-purple-500"}`}
             >
-              <FontAwesomeIcon icon={faHeart} /> お気に入りの遊び場
+              <FontAwesomeIcon icon={faHeart} /> Dịch vụ đã thích
             </Link>
           </motion.nav>
         )}
@@ -142,8 +142,8 @@ function Header({ role }) {
                   alt="User Avatar"
                   className={`w-8 h-8 rounded-full border-2 transition-all duration-300 ${
                     isMenuOpen 
-                      ? 'border-green-600 shadow-lg scale-110' 
-                      : 'border-green-500 hover:border-green-600 hover:scale-105'
+                      ? 'border-purple-600 shadow-lg scale-110' 
+                      : 'border-purple-500 hover:border-purple-600 hover:scale-105'
                   }`}
                 />
               </button>
@@ -155,21 +155,21 @@ function Header({ role }) {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg border border-green-100 overflow-hidden"
+                    className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg border border-purple-100 overflow-hidden"
                     style={{ transformOrigin: 'top right' }}
                   >
                     <div className="py-2">
                       <Link
                         to="/profile"
-                        className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                        className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
                         onClick={() => setMenuOpen(false)}
                       >
-                        <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                        <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
                           <FontAwesomeIcon icon={faUserCircle} className="w-4 h-4" />
                         </div>
                         <div>
-                          <div className="font-medium">プロフィール</div>
-                          <div className="text-xs text-gray-500">アカウント設定</div>
+                          <div className="font-medium">Thông tin cá nhân</div>
+                          <div className="text-xs text-gray-500">Chỉnh sửa thông tin </div>
                         </div>
                       </Link>
                       
@@ -185,8 +185,8 @@ function Header({ role }) {
                           <FontAwesomeIcon icon={faSignOutAlt} className="w-4 h-4" />
                         </div>
                         <div>
-                          <div className="font-medium">ログアウト</div>
-                          <div className="text-xs text-gray-500">アカウントから出る</div>
+                          <div className="font-medium">Đăng xuất</div>
+                          <div className="text-xs text-gray-500">Đăng xuất tài khoản</div>
                         </div>
                       </button>
                     </div>
@@ -204,9 +204,9 @@ function Header({ role }) {
               </Link>
               <Link
                 to="/auth/sign-up"
-                className="flex items-center gap-2 px-4 py-2 bg-green-500 text-white hover:bg-green-700 rounded-md transition-all duration-300"
+                className="flex items-center gap-2 px-4 py-2 bg-purple-500 text-white hover:bg-purple-700 rounded-md transition-all duration-300"
               >
-                <FontAwesomeIcon icon={faUserPlus} /> 登録
+                <FontAwesomeIcon icon={faUserPlus} /> Đăng kí
               </Link>
             </div>
           )}

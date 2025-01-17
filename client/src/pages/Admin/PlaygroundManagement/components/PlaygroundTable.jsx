@@ -30,53 +30,53 @@ function PlaygroundTable({
       animate={{ opacity: 1, y: 0 }}
       className="mt-8"
     >
-      <div className="bg-white rounded-xl shadow-lg border-2 border-green-500/20 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-lg border-2 border-purple-500/20 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="bg-gradient-to-r from-green-50 to-white border-b-2 border-green-500/20">
-                <th className="py-4 px-6 text-left font-bold text-green-700 w-16 uppercase text-xs tracking-wider">
+              <tr className="bg-gradient-to-r from-purple-50 to-white border-b-2 border-purple-500/20">
+                <th className="py-4 px-6 text-left font-bold text-purple-700 w-16 uppercase text-xs tracking-wider">
                   #
                 </th>
-                <th className="py-4 px-6 text-left font-bold text-green-700 uppercase text-xs tracking-wider">
+                <th className="py-4 px-6 text-left font-bold text-purple-700 uppercase text-xs tracking-wider">
                   場所ID
                 </th>
-                <th className="py-4 px-6 text-left font-bold text-green-700 uppercase text-xs tracking-wider">
+                <th className="py-4 px-6 text-left font-bold text-purple-700 uppercase text-xs tracking-wider">
                   施設名
                 </th>
-                <th className="py-4 px-6 text-left font-bold text-green-700 uppercase text-xs tracking-wider">
+                <th className="py-4 px-6 text-left font-bold text-purple-700 uppercase text-xs tracking-wider">
                   料金-べトナムドン
                 </th>
-                <th className="py-4 px-6 text-left font-bold text-green-700 uppercase text-xs tracking-wider">
+                <th className="py-4 px-6 text-left font-bold text-purple-700 uppercase text-xs tracking-wider">
                   営業時間
                 </th>
-                <th className="py-4 px-6 text-center font-bold text-green-700 uppercase text-xs tracking-wider">
+                <th className="py-4 px-6 text-center font-bold text-purple-700 uppercase text-xs tracking-wider">
                   アクション
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-green-100">
+            <tbody className="divide-y divide-purple-100">
               {displayPlaygrounds?.map((playground, index) => (
                 <motion.tr
                   key={playground?._id}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="hover:bg-green-50/50 group transition-all duration-200"
+                  className="hover:bg-purple-50/50 group transition-all duration-200"
                 >
-                  <td className="py-4 px-6 text-sm font-bold text-green-600">
+                  <td className="py-4 px-6 text-sm font-bold text-purple-600">
                     {index + 1}
                   </td>
-                  <td className="py-4 px-6 text-sm text-gray-500 group-hover:text-green-600 transition-colors">
+                  <td className="py-4 px-6 text-sm text-gray-500 group-hover:text-purple-600 transition-colors">
                     {playground?._id}
                   </td>
-                  <td className="py-4 px-6 text-sm font-medium text-gray-900 group-hover:text-green-700">
+                  <td className="py-4 px-6 text-sm font-medium text-gray-900 group-hover:text-purple-700">
                     {playground?.name}
                   </td>
-                  <td className="py-4 px-6 text-sm text-gray-500 group-hover:text-green-600 transition-colors">
+                  <td className="py-4 px-6 text-sm text-gray-500 group-hover:text-purple-600 transition-colors">
                     {playground?.admissionFee}
                   </td>
-                  <td className="py-4 px-6 text-sm text-gray-500 group-hover:text-green-600 transition-colors">
+                  <td className="py-4 px-6 text-sm text-gray-500 group-hover:text-purple-600 transition-colors">
                     {convertTimeToString(playground?.openingTime)}-
                     {convertTimeToString(playground?.closingTime)}
                   </td>
@@ -88,7 +88,7 @@ function PlaygroundTable({
                         onClick={() => {
                           navigate(`/admin/playgrounds/${playground?._id}`); // Đường dẫn cho admin view
                         }} // Đảm bảo đường dẫn này đúng
-                        className="p-2 text-green-600 hover:text-green-500 hover:bg-green-50 
+                        className="p-2 text-purple-600 hover:text-purple-500 hover:bg-purple-50 
                                 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
                         title="詳細を見る"
                       >
@@ -112,9 +112,9 @@ function PlaygroundTable({
           </table>
         </div>
 
-        <div className="px-6 py-4 border-t-2 border-green-500/20 bg-gradient-to-br from-green-50 to-white">
+        <div className="px-6 py-4 border-t-2 border-purple-500/20 bg-gradient-to-br from-purple-50 to-white">
           <div className="flex justify-between items-center">
-            <div className="text-sm text-green-600 font-medium">
+            <div className="text-sm text-purple-600 font-medium">
               表示: {displayPlaygrounds?.length} 件
             </div>
             <Pagination

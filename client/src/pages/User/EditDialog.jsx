@@ -14,9 +14,9 @@ const EditDialog = ({ isOpen, onClose, onSave, title, currentValue, fieldType = 
       case 'phone':
         return '電話番号';
       case 'gender':
-        return '性別';
+        return 'Giới tính';
       case 'birthday':
-        return '生年月日';
+        return 'Ngày tháng năm sinh';
       default:
         return title;
     }
@@ -48,7 +48,7 @@ const EditDialog = ({ isOpen, onClose, onSave, title, currentValue, fieldType = 
             name="gender"
             value={option.value}
             defaultChecked={currentValue === option.value}
-            className="w-5 h-5 text-green-600 border-gray-300 focus:ring-green-500 transition duration-300"
+            className="w-5 h-5 text-purple-600 border-gray-300 focus:ring-purple-500 transition duration-300"
           />
           <span className="text-base text-gray-700">{option.label}</span>
         </label>
@@ -62,7 +62,7 @@ const EditDialog = ({ isOpen, onClose, onSave, title, currentValue, fieldType = 
         name="value"
         type={fieldType}
         defaultValue={currentValue}
-        className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition duration-300"
+        className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300"
         autoFocus
       />
     );
@@ -90,8 +90,8 @@ const EditDialog = ({ isOpen, onClose, onSave, title, currentValue, fieldType = 
           >
             <div className="flex justify-between items-center p-4 border-b border-gray-200">
               <div className="flex items-center gap-2">
-                <Edit className="w-5 h-5 text-green-500" />
-                <h3 className="text-lg font-semibold text-[#16a34a]">
+                <Edit className="w-5 h-5 text-purple-500" />
+                <h3 className="text-lg font-semibold text-purple-500">
                   {getFieldLabel(title)}
                 </h3>
               </div>
@@ -123,7 +123,7 @@ const EditDialog = ({ isOpen, onClose, onSave, title, currentValue, fieldType = 
               </motion.button>
               <motion.button
                 type="submit"
-                className="px-4 py-2 flex items-center gap-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-300"
+                className="px-4 py-2 flex items-center gap-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

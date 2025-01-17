@@ -104,7 +104,7 @@ function PlaygroundManagement() {
         {/* Header Section */}
         <div className="mb-8 flex justify-between items-center">
           <div className="space-y-2">
-            <h1 className="text-2xl font-bold text-green-600">遊び場管理</h1>
+            <h1 className="text-2xl font-bold text-purple-600">遊び場管理</h1>
             <p className="text-sm text-gray-500">
               遊び場の一覧と管理が可能です。
             </p>
@@ -115,8 +115,8 @@ function PlaygroundManagement() {
             whileTap={{ scale: 0.98 }}
             onClick={() => navigate("/admin/playgrounds/add")}
             className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r 
-                     from-green-600 to-green-500 text-white font-medium rounded-xl 
-                     shadow-lg hover:shadow-xl hover:from-green-500 hover:to-green-400
+                     from-purple-600 to-purple-500 text-white font-medium rounded-xl 
+                     shadow-lg hover:shadow-xl hover:from-purple-500 hover:to-purple-400
                      transition-all duration-200 gap-2.5 group"
           >
             <div

@@ -18,13 +18,13 @@ function Sidebar() {
   ];
 
   return (
-    <div className="h-full flex flex-col bg-white border-r border-green-100">
-      <div className="p-6 border-b border-green-100">
+    <div className="h-full flex flex-col bg-white border-r border-purple-100">
+      <div className="p-6 border-b border-purple-100">
         <motion.h2 
           whileHover={{ scale: 1.01 }}
-          className="text-2xl font-bold text-green-600"
+          className="text-2xl font-bold text-purple-600"
         >
-          Lumiroo
+          Bảy thanh cắt tóc
         </motion.h2>
       </div>
 
@@ -40,8 +40,8 @@ function Sidebar() {
               className={`
                 flex items-center px-4 py-3 my-1.5 rounded-lg transition-all duration-200
                 ${location.pathname === item.path 
-                  ? "bg-green-600 shadow-md shadow-green-100" 
-                  : "text-gray-600 hover:bg-green-50"
+                  ? "bg-purple-600 shadow-md shadow-purple-100" 
+                  : "text-gray-600 hover:bg-purple-50"
                 }
               `}
             >
@@ -49,7 +49,7 @@ function Sidebar() {
                 w-5 h-5 mr-3
                 ${location.pathname === item.path 
                   ? "text-white" 
-                  : "text-green-600"
+                  : "text-purple-600"
                 }
               `} />
               <span className={`
@@ -66,12 +66,12 @@ function Sidebar() {
         ))}
       </nav>
 
-      <div className="p-4 border-t border-green-100">
+      <div className="p-4 border-t border-purple-100">
         <motion.div 
           whileHover={{ scale: 1.01 }}
           className="flex items-center space-x-3"
         >
-          <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center shadow-sm">
+          <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center shadow-sm">
             <FaUsers className="text-white w-4 h-4" />
           </div>
           <div>

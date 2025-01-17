@@ -186,7 +186,7 @@ function PlaygroundRecommendation() {
   return (
     <div className="min-h-[calc(100vh-4rem)] flex bg-gray-50">
       {/* Sidebar Filter */}
-      <aside className="w-full md:w-80 lg:w-96 bg-gradient-to-br from-green-50 to-green-100 border-r relative z-0">
+      <aside className="w-full md:w-80 lg:w-96 bg-gradient-to-br from-purple-50 to-purple-100 border-r relative z-0">
         <div className="h-full overflow-y-auto px-5 md:px-6 py-8">
           {/* Area Selection */}
           <section className="mb-8">
@@ -206,10 +206,10 @@ function PlaygroundRecommendation() {
                   {areas.map((item, index) => (
                     <button
                       key={index}
-                      className={`w-full text-left p-2.5 text-sm hover:bg-green-50 transition-colors
+                      className={`w-full text-left p-2.5 text-sm hover:bg-purple-50 transition-colors
                           ${
                             item.name === selectedArea
-                              ? "bg-green-100 text-green-800"
+                              ? "bg-purple-100 text-purple-800"
                               : "text-gray-700"
                           }`}
                       onClick={() => handleToggleArea(item.name)}
@@ -236,7 +236,7 @@ function PlaygroundRecommendation() {
               />
             </div>
             <button
-              className="w-full px-4 py-2 text-sm bg-green-600 hover:bg-green-700 text-white rounded-lg shadow transition-colors"
+              className="w-full px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow transition-colors"
               onClick={handleExpandedAttraction}
             >
               もっと
@@ -285,10 +285,10 @@ function PlaygroundRecommendation() {
 
           {/* Filter Button */}
           <button
-            className="w-full px-4 py-3 text-sm font-medium bg-green-600 hover:bg-green-700 text-white rounded-xl shadow-sm transition-all hover:shadow-md"
+            className="w-full px-4 py-3 text-sm font-medium bg-purple-600 hover:bg-purple-700 text-white rounded-xl shadow-sm transition-all hover:shadow-md"
             onClick={handleClickFilter}
           >
-            確認する
+             Xác Nhận
           </button>
         </div>
       </aside>
@@ -321,7 +321,7 @@ function PlaygroundRecommendation() {
                 <div className="relative w-64">
                   <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                   <input
-                    className="w-full pl-10 pr-4 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full pl-10 pr-4 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                     type="text"
                     placeholder="検索"
                     value={attractionSearch}
@@ -345,10 +345,10 @@ function PlaygroundRecommendation() {
                   キャンセル
                 </button>
                 <button
-                  className="px-6 py-2 text-sm bg-green-600 hover:bg-green-700 text-white rounded-lg shadow transition-colors"
+                  className="px-6 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow transition-colors"
                   onClick={handleConfirm}
                 >
-                  確認する
+                   Xác Nhận
                 </button>
               </div>
             </div>

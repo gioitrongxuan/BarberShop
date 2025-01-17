@@ -13,17 +13,17 @@ const AttractionForm = ({ attraction, onClose, onSubmit }) => {
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="bg-white rounded-2xl shadow-xl w-full max-w-xl mx-4 overflow-hidden border border-green-100"
+          className="bg-white rounded-2xl shadow-xl w-full max-w-xl mx-4 overflow-hidden border border-purple-100"
         >
           {/* Header */}
-          <div className="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-gradient-to-r from-green-50 to-white">
+          <div className="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-gradient-to-r from-purple-50 to-white">
             <div className="flex items-center gap-2">
               {isEdit ? (
-                <Pencil className="w-6 h-6 text-green-600" />
+                <Pencil className="w-6 h-6 text-purple-600" />
               ) : (
-                <Plus className="w-6 h-6 text-green-600" />
+                <Plus className="w-6 h-6 text-purple-600" />
               )}
-              <h2 className="text-xl font-bold text-green-600">
+              <h2 className="text-xl font-bold text-purple-600">
                 {isEdit ? 'アトラクションを編集' : '新しいアトラクション'}
               </h2>
             </div>
@@ -40,7 +40,7 @@ const AttractionForm = ({ attraction, onClose, onSubmit }) => {
           {/* Form Content */}
           <div className="p-6 space-y-6">
             <div className="space-y-2">
-              <label className="flex items-center gap-2 text-sm font-bold text-green-600">
+              <label className="flex items-center gap-2 text-sm font-bold text-purple-600">
                 <Type className="w-4 h-4" />
                 アトラクション名
               </label>
@@ -49,13 +49,13 @@ const AttractionForm = ({ attraction, onClose, onSubmit }) => {
                 defaultValue={attraction?.name}
                 placeholder="アトラクション名を入力してください"
                 className="w-full px-4 py-3 text-sm border border-gray-200 rounded-xl
-                         focus:ring-2 focus:ring-green-500 focus:border-transparent
+                         focus:ring-2 focus:ring-purple-500 focus:border-transparent
                          outline-none transition-all shadow-sm"
               />
             </div>
 
             <div className="space-y-2">
-              <label className="flex items-center gap-2 text-sm font-bold text-green-600">
+              <label className="flex items-center gap-2 text-sm font-bold text-purple-600">
                 <FileText className="w-4 h-4" />
                 説明
               </label>
@@ -64,7 +64,7 @@ const AttractionForm = ({ attraction, onClose, onSubmit }) => {
                 placeholder="アトラクションの説明を入力してください"
                 rows={4}
                 className="w-full px-4 py-3 text-sm border border-gray-200 rounded-xl
-                         focus:ring-2 focus:ring-green-500 focus:border-transparent
+                         focus:ring-2 focus:ring-purple-500 focus:border-transparent
                          outline-none transition-all shadow-sm resize-none"
               />
             </div>
@@ -85,8 +85,8 @@ const AttractionForm = ({ attraction, onClose, onSubmit }) => {
             <motion.button
               whileHover={{ scale: 1.02, backgroundColor: '#22c55e' }}
               whileTap={{ scale: 0.98 }}
-              className="px-4 py-2.5 text-white bg-green-600 rounded-xl
-                       hover:bg-green-500 transition-colors flex items-center gap-2"
+              className="px-4 py-2.5 text-white bg-purple-600 rounded-xl
+                       hover:bg-purple-500 transition-colors flex items-center gap-2"
             >
               <Save className="w-4 h-4" />
               <span>{isEdit ? '更新' : '追加'}</span>

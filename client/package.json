@@ -2,7 +2,7 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "description": "Lumiroo Frontend",
+  "description": "Barbershop Frontend",
   "author": "ストレスチーム",
   "type": "module",
   "engines": {

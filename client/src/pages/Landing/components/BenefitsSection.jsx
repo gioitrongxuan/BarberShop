@@ -40,7 +40,7 @@ const BenefitCard = ({ icon: Icon, title, description, index, gradient }) => {
 
           {/* Text Content */}
           <div className="flex-1">
-            <h3 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-[#16a34a] transition-colors">
+            <h3 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-purple-500 transition-colors">
               {title}
             </h3>
             <p className="text-gray-600 leading-relaxed">
@@ -66,7 +66,7 @@ const BenefitsSection = () => {
     {
       icon: Shield,
       title: "安全で信頼できる遊び場情報",
-      description: "すべての遊び場は安全基準を満たし、定期的に確認されています。お子様の安全を第一に考えた情報提供を心がけています。",
+      description: "すべての遊び場は安全基準を満たし、定期的に Xác Nhậnされています。お子様の安全を第一に考えた情報提供を心がけています。",
     },
     {
       icon: Users,
@@ -92,7 +92,7 @@ const BenefitsSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Lumirooの<span className="text-[#16a34a]">メリット</span>
+            Bảy thanh cắt tóc<span className="text-purple-500">メリット</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             安全で楽しい遊び場探しを、より簡単により良く。

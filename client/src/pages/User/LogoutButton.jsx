@@ -70,7 +70,7 @@ const LogoutButton = ({ onLogout }) => {
         >
           <LogOut className="w-5 h-5 transition-transform group-hover:rotate-12" />
         </motion.div>
-        <span className="font-medium">ログアウト</span>
+        <span className="font-medium">Đăng xuất</span>
       </motion.button>
 
       <AnimatePresence>
@@ -152,7 +152,7 @@ const LogoutButton = ({ onLogout }) => {
                     transition: { delay: 0.3 }
                   }}
                 >
-                  ログアウトの確認
+                  Đăng xuấtの Xác Nhận
                 </motion.h2>
 
                 <motion.p
@@ -164,7 +164,7 @@ const LogoutButton = ({ onLogout }) => {
                     transition: { delay: 0.4 }
                   }}
                 >
-                  システムからログアウトしてもよろしいですか？
+                  システムからĐăng xuấtしてもよろしいですか？
                 </motion.p>
 
                 <div className="flex gap-3 justify-center">
@@ -187,7 +187,7 @@ const LogoutButton = ({ onLogout }) => {
                       setShowConfirm(false);
                     }}
                   >
-                    <span>ログアウト</span>
+                    <span>Đăng xuất</span>
                     <ArrowRight className="w-4 h-4" />
                   </motion.button>
                 </div>

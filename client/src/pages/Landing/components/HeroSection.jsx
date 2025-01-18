@@ -35,7 +35,7 @@ const HeroSection = () => {
   }, [images]);
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-white via-[#e9f6e9] to-white overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-white via-[#e9f6e9] to-white overflow-hidden mt-5 sm:mt-0">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-[0.15]" 

@@ -22,7 +22,7 @@ function Sidebar() {
       <div className="p-6 border-b border-purple-100">
         <motion.h2 
           whileHover={{ scale: 1.01 }}
-          className="text-2xl font-bold text-purple-600"
+          className="sm:text-2xl font-bold text-purple-600 text-xl"
         >
           Bảy thanh cắt tóc
         </motion.h2>

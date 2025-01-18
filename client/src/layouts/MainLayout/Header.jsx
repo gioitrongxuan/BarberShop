@@ -3,27 +3,27 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../../components/Logo/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {logout} from "../../apis/auth";
-import { 
-  faHome, 
-  faSearch, 
-  faHeart, 
-  faSignOutAlt, 
-  faUser, 
+import { logout } from "../../apis/auth";
+import {
+  faBars,
+  faTimes,
+  faHome,
+  faSearch,
+  faHeart,
+  faSignOutAlt,
+  faUser,
   faUserPlus,
-  faUserCircle 
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header({ role }) {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isLoggedOut, setLoggedOut] = useState(false);
+  const [isNavOpen, setNavOpen] = useState(false);
   const location = useLocation();
   const userData = localStorage.getItem("user");
-  //read user data from local storage
   const user = JSON.parse(userData);
   let avatarUrl = user ? user.avatarUrl : null;
   avatarUrl = avatarUrl || "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Adrian";
-
 
   const navigate = useNavigate();
   const menuRef = useRef(null);
@@ -34,15 +34,14 @@ function Header({ role }) {
     e.stopPropagation();
     setMenuOpen(!isMenuOpen);
   };
-  
 
-  const handleLogout =  async () => {
-    //setLoggedOut(true);
-    //setMenuOpen(false);
-    // Implement logout logic here
+  const toggleNav = () => {
+    setNavOpen(!isNavOpen);
+  };
+
+  const handleLogout = async () => {
     await logout();
-    // tạm thời cho tới page signin
-    navigate('/auth/sign-in')
+    navigate("/auth/sign-in");
   };
 
   useEffect(() => {
@@ -52,35 +51,9 @@ function Header({ role }) {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  const dropdownVariants = {
-    hidden: { 
-      opacity: 0,
-      y: -10,
-      scale: 0.95
-    },
-    visible: { 
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
-      }
-    },
-    exit: {
-      opacity: 0,
-      y: -10,
-      scale: 0.95,
-      transition: {
-        duration: 0.2,
-        ease: "easeIn"
-      }
-    }
-  };
 
   return (
     <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
@@ -95,34 +68,69 @@ function Header({ role }) {
           <Logo size="text-3xl" />
         </motion.div>
 
-        {/* Navigation Links */}
-        {role !== "admin" && (
-          <motion.nav
-            className="flex items-center gap-6 text-base font-medium text-gray-700"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+        {/* Hamburger Menu */}
+        <div className="sm:hidden">
+          <button
+            onClick={toggleNav}
+            className="text-gray-700 focus:outline-none"
           >
-            <Link
-              to="/home"
-              className={`flex items-center gap-2 transition duration-300 ${isActive("/home") ? "text-purple-500 border-b-2 border-purple-500" : "hover:text-purple-500"}`}
-            >
-              <FontAwesomeIcon icon={faHome} /> Trang chủ
-            </Link>
-            <Link
-              to="/playground-recommendation"
-              className={`flex items-center gap-2 transition duration-300 ${isActive("/playground-recommendation") ? "text-purple-500 border-b-2 border-purple-500" : "hover:text-purple-500"}`}
-            >
-              <FontAwesomeIcon icon={faSearch} /> Tìm dịch vụ
-            </Link>
-            <Link
-              to="/favorites"
-              className={`flex items-center gap-2 transition duration-300 ${isActive("/favorites") ? "text-purple-500 border-b-2 border-purple-500" : "hover:text-purple-500"}`}
-            >
-              <FontAwesomeIcon icon={faHeart} /> Dịch vụ đã thích
-            </Link>
-          </motion.nav>
-        )}
+            <FontAwesomeIcon icon={isNavOpen ? faTimes : faBars} size="lg" />
+          </button>
+        </div>
+
+        {/* Navigation Links */}
+        <motion.nav
+          className={`${
+            isNavOpen ? "fixed top-0 right-0 w-3/4 h-full bg-white flex flex-col items-start pt-6 px-6 shadow-lg z-40" : "hidden"
+          } sm:flex items-center gap-6 text-base font-medium text-gray-700`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <button
+            className="self-end text-gray-700 mb-4"
+            onClick={toggleNav}
+          >
+            <FontAwesomeIcon icon={faTimes} size="lg" className=" sm:hidden"/>
+          </button>
+          {role !== "admin" && (
+            <>
+              <Link
+                to="/home"
+                className={`flex items-center gap-2 transition duration-300 ${
+                  isActive("/home")
+                    ? "text-purple-500 border-b-2 border-purple-500"
+                    : "hover:text-purple-500"
+                }`}
+                onClick={toggleNav}
+              >
+                <FontAwesomeIcon icon={faHome} /> Trang chủ
+              </Link>
+              <Link
+                to="/playground-recommendation"
+                className={`flex items-center gap-2 transition duration-300 ${
+                  isActive("/playground-recommendation")
+                    ? "text-purple-500 border-b-2 border-purple-500"
+                    : "hover:text-purple-500"
+                }`}
+                onClick={toggleNav}
+              >
+                <FontAwesomeIcon icon={faSearch} /> Tìm dịch vụ
+              </Link>
+              <Link
+                to="/favorites"
+                className={`flex items-center gap-2 transition duration-300 ${
+                  isActive("/favorites")
+                    ? "text-purple-500 border-b-2 border-purple-500"
+                    : "hover:text-purple-500"
+                }`}
+                onClick={toggleNav}
+              >
+                <FontAwesomeIcon icon={faHeart} /> Dịch vụ đã thích
+              </Link>
+            </>
+          )}
+        </motion.nav>
 
         {/* Profile Section */}
         <motion.div
@@ -131,7 +139,23 @@ function Header({ role }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {!isLoggedOut ? (
+          {!userData ? (
+            <div className="flex gap-4">
+              <Link
+                to="/auth/sign-in"
+                className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 hover:bg-gray-100 rounded-md transition-all duration-300"
+              >
+                <FontAwesomeIcon icon={faUser} />
+                <span className="hidden sm:inline">Đăng nhập</span>
+              </Link>
+              <Link
+                to="/auth/sign-up"
+                className="flex items-center gap-2 px-4 py-2 bg-purple-500 text-white hover:bg-purple-700 rounded-md transition-all duration-300"
+              >
+                <FontAwesomeIcon icon={faUserPlus} /> Đăng kí
+              </Link>
+            </div>
+          ) : (
             <div className="relative" ref={menuRef}>
               <button
                 className="flex items-center focus:outline-none"
@@ -141,9 +165,9 @@ function Header({ role }) {
                   src={avatarUrl}
                   alt="User Avatar"
                   className={`w-8 h-8 rounded-full border-2 transition-all duration-300 ${
-                    isMenuOpen 
-                      ? 'border-purple-600 shadow-lg scale-110' 
-                      : 'border-purple-500 hover:border-purple-600 hover:scale-105'
+                    isMenuOpen
+                      ? "border-purple-600 shadow-lg scale-110"
+                      : "border-purple-500 hover:border-purple-600 hover:scale-105"
                   }`}
                 />
               </button>
@@ -151,12 +175,25 @@ function Header({ role }) {
               <AnimatePresence>
                 {isMenuOpen && (
                   <motion.div
-                    variants={dropdownVariants}
+                    variants={{
+                      hidden: { opacity: 0, y: -10, scale: 0.95 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        transition: { duration: 0.2, ease: "easeOut" },
+                      },
+                      exit: {
+                        opacity: 0,
+                        y: -10,
+                        scale: 0.95,
+                        transition: { duration: 0.2, ease: "easeIn" },
+                      },
+                    }}
                     initial="hidden"
                     animate="visible"
                     exit="exit"
                     className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg border border-purple-100 overflow-hidden"
-                    style={{ transformOrigin: 'top right' }}
                   >
                     <div className="py-2">
                       <Link
@@ -169,10 +206,10 @@ function Header({ role }) {
                         </div>
                         <div>
                           <div className="font-medium">Thông tin cá nhân</div>
-                          <div className="text-xs text-gray-500">Chỉnh sửa thông tin </div>
+                          <div className="text-xs text-gray-500">Chỉnh sửa thông tin</div>
                         </div>
                       </Link>
-                      
+
                       <div className="px-3 my-1">
                         <div className="border-t border-gray-200"></div>
                       </div>
@@ -193,21 +230,6 @@ function Header({ role }) {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
-          ) : (
-            <div className="flex gap-4">
-              <Link
-                to="/auth/sign-in"
-                className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 hover:bg-gray-100 rounded-md transition-all duration-300"
-              >
-                <FontAwesomeIcon icon={faUser} /> ログイン
-              </Link>
-              <Link
-                to="/auth/sign-up"
-                className="flex items-center gap-2 px-4 py-2 bg-purple-500 text-white hover:bg-purple-700 rounded-md transition-all duration-300"
-              >
-                <FontAwesomeIcon icon={faUserPlus} /> Đăng kí
-              </Link>
             </div>
           )}
         </motion.div>

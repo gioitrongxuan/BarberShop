@@ -31,13 +31,15 @@ const LandingHeader = () => {
               to="/auth/sign-in"
               className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-purple-500 transition-colors"
             >
-              <FontAwesomeIcon icon={faUser} /> ログイン
+              <FontAwesomeIcon icon={faUser} /> 
+              <span className='hidden sm:inline'>Đăng nhập</span>
             </Link>
             <Link
               to="/auth/sign-up"
               className="flex items-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-[#15803d] transition-all duration-300"
             >
-              <FontAwesomeIcon icon={faUserPlus} /> Đăng kí
+              <FontAwesomeIcon icon={faUserPlus} /> 
+              <span className='hidden sm:inline'>Đăng kí</span>
             </Link>
           </motion.div>
         </div>

@@ -94,7 +94,7 @@ const SignUp = () => {
     <TransitionWrapper direction={-1}>
       <div className="min-h-screen flex overflow-hidden">
         <motion.div
-          className="w-1/2 relative p-10 shadow-2xl flex flex-col justify-center items-center bg-gradient-to-b from-white to-purple-50"
+          className="w-full sm:w-1/2 relative p-10 shadow-2xl flex flex-col justify-center items-center bg-gradient-to-b from-white to-purple-50"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}

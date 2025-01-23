@@ -8,7 +8,7 @@ const SignInLeft = ({ lottieAnimation }) => {
 
   return (
     <motion.div
-      className="w-1/2 bg-purple-100 flex flex-col justify-center items-center p-10"
+      className="w-1/2 bg-purple-100  hidden sm:flex sm:flex-col justify-center items-center p-10"
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}

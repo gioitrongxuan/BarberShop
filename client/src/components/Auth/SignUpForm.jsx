@@ -10,7 +10,7 @@ const SignUpForm = ({
 }) => {
   return (
     <motion.div
-        className="relative bg-white rounded-3xl shadow-xl p-8 z-10 w-[750px] mx-auto"
+        className="relative bg-white rounded-3xl shadow-xl p-8 z-10 mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
@@ -26,7 +26,7 @@ const SignUpForm = ({
       <motion.form onSubmit={onSubmit} className="space-y-6">
         <div className="flex gap-8">
           {/* Avatar Section */}
-          <div className="w-32">
+          <div className="w-32 hidden sm:block">
             <motion.label
               htmlFor="avatar-upload"
               className="block w-32 h-32 rounded-full cursor-pointer"
@@ -77,7 +77,7 @@ const SignUpForm = ({
             </div>
 
             {/* Password Section */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-rows-2 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-base font-bold text-purple-600 mb-1 block">
                   Mật khẩu
@@ -114,7 +114,7 @@ const SignUpForm = ({
             </div>
 
             {/* Birthday & Gender */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-rows-2 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-base font-bold text-purple-600 mb-1 block">
                   Ngày tháng năm sinh
